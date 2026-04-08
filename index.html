@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Street Digital — We Show Up. You Stand Out.</title>
+  <meta name="description" content="Main Street Digital helps local businesses build professional online presences. Websites that convert and social media that gets noticed. Serving Lancaster & York County, PA." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Home-page-only overrides ─────────────────────────── */
+    .social-proof-bar { padding-top: 1.75rem; padding-bottom: 1.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SHARED NAVIGATION
+  ══════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="Main Street Digital — Home">
+        <img src="logos/logo-nav-transparent.png" alt="Main Street Digital">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Work With Us</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-primary nav-cta">Get a Free Consult</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile overlay -->
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile slide menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Work With Us</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary btn-full">Get a Free Consult</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── HERO ──────────────────────────────────────────── -->
+    <section class="hero-home" aria-labelledby="hero-heading">
+      <div class="hero-video-stack" aria-hidden="true">
+        <video
+          id="hero-video-player"
+          class="hero-video-player"
+          autoplay
+          muted
+          playsinline
+          preload="auto"
+          data-playlist="videos/hero-mainstreet.mp4,videos/hero-retail.mp4,videos/hero-restaurant.mp4"
+        ></video>
+      </div>
+      <div class="hero-home-content">
+        <p class="section-label" style="color: var(--gold); margin-bottom: 1.25rem;">
+          Big Results for Main Street Businesses
+        </p>
+        <h1 id="hero-heading">We Show Up.<br>You Stand Out.</h1>
+        <p class="hero-sub">
+          Main Street Digital helps local businesses build a professional online presence —
+          websites that convert and social media that gets noticed.
+        </p>
+        <div class="hero-cta-group">
+          <a href="services.html" class="btn btn-primary btn-lg">See Our Services</a>
+          <a href="contact.html" class="btn btn-outline-white btn-lg">Book a Free Consult</a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 5v18M7 17l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ── SOCIAL PROOF BAR ───────────────────────────────── -->
+    <div class="social-proof-bar" role="list" aria-label="Our capabilities">
+      <div class="proof-bar-inner">
+        <span class="proof-pill" role="listitem">Websites</span>
+        <span class="proof-pill" role="listitem">Social Media</span>
+        <span class="proof-pill" role="listitem">Google Business</span>
+        <span class="proof-pill" role="listitem">Paid Ads</span>
+        <span class="proof-pill" role="listitem">Brand Identity</span>
+        <span class="proof-pill" role="listitem">Email Marketing</span>
+      </div>
+    </div>
+
+    <!-- ── PAIN POINTS ────────────────────────────────────── -->
+    <section class="pain-points" aria-labelledby="pain-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Sound Familiar?</span>
+          <h2 id="pain-heading">Your business is great.<br>Your online presence doesn't show it.</h2>
+        </div>
+
+        <div class="pain-grid">
+
+          <!-- Card 1 -->
+          <div class="pain-card">
+            <div class="pain-card-icon">
+              <!-- Monitor icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3>"Your website looks like it was built in 2012"</h3>
+            <p>First impressions happen online before customers ever walk through your door. An outdated site signals an outdated business.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="pain-card">
+            <div class="pain-card-icon">
+              <!-- Calendar icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h3>"You're posting when you remember to"</h3>
+            <p>Inconsistent social presence signals an inconsistent business. Customers notice — and so does the algorithm.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="pain-card">
+            <div class="pain-card-icon">
+              <!-- Search icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <h3>"You're invisible on Google"</h3>
+            <p>If someone searches for what you offer and you don't show up, your competitor gets the call. Every single time.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW WE HELP ─────────────────────────────────────── -->
+    <section class="how-we-help" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="how-heading" style="color: var(--white);">Big Results for Main Street Businesses.</h2>
+        </div>
+        <div class="how-columns">
+
+          <div class="how-column">
+            <div class="how-number">01</div>
+            <h3>We Build It</h3>
+            <p>Professional websites designed from the ground up to convert visitors into customers — fast, modern, and built to last.</p>
+          </div>
+
+          <div class="how-column">
+            <div class="how-number">02</div>
+            <h3>We Run It</h3>
+            <p>Social media managed consistently, on-brand, every week. You focus on your business; we handle your digital presence.</p>
+          </div>
+
+          <div class="how-column">
+            <div class="how-number">03</div>
+            <h3>We Grow It</h3>
+            <p>Strategic ads, local SEO, and email marketing that turn attention into revenue. Real results, not vanity metrics.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES PREVIEW ───────────────────────────────── -->
+    <section class="services-preview" aria-labelledby="services-preview-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What We Do</span>
+          <h2 id="services-preview-heading">Two Core Offerings.<br>One Clear Mission.</h2>
+        </div>
+
+        <div class="service-preview-grid">
+
+          <div class="service-preview-card">
+            <p class="service-preview-tag">Social Media</p>
+            <h3>Social Media Marketing</h3>
+            <p class="service-price">Starting at $497/mo</p>
+            <p>Consistent, on-brand content across your most important platforms. From custom posts to paid ads — we handle all of it so your business stays top of mind.</p>
+            <a href="services.html" class="text-link">See Packages</a>
+          </div>
+
+          <div class="service-preview-card">
+            <p class="service-preview-tag">Web Design</p>
+            <h3>Website Design &amp; Development</h3>
+            <p class="service-price">Starting at $1,500</p>
+            <p>A website that actually works for your business — mobile-first, fast, and built to turn visitors into leads from the moment they land on it.</p>
+            <a href="services.html" class="text-link">See Packages</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TRUST SIGNALS ──────────────────────────────────── -->
+    <section class="trust-signals" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Why Main Street Digital</span>
+          <h2 id="trust-heading">Built Different, On Purpose.</h2>
+        </div>
+        <div class="trust-grid">
+
+          <div class="trust-item">
+            <div class="trust-check" aria-hidden="true">
+              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 7.5l3.5 3.5 6-7"/>
+              </svg>
+            </div>
+            <div>
+              <h4>No Long Contracts</h4>
+              <p>Stay because it's working, not because you're locked in. We earn your business month after month.</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-check" aria-hidden="true">
+              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 7.5l3.5 3.5 6-7"/>
+              </svg>
+            </div>
+            <div>
+              <h4>You Own Everything</h4>
+              <p>Your domain, your website, your accounts. Always. We build assets that belong to you — full stop.</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-check" aria-hidden="true">
+              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 7.5l3.5 3.5 6-7"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Local Market Focus</h4>
+              <p>We understand your community, your customers, and your competition. We're not a national agency pretending to care about Lancaster.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BANNER ─────────────────────────────────────── -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">Ready to get found?</h2>
+        <p>Schedule a free 30-minute consultation. No pressure, no pitch — just an honest conversation about where your business stands and where it could go.</p>
+        <a href="contact.html" class="btn btn-white btn-lg">Book Your Free Consult</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SHARED FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="logos/logo-nav-transparent.png" alt="Main Street Digital">
+        </a>
+        <p class="footer-tagline">We Show Up. You Stand Out.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Work With Us</a>
+      </nav>
+
+      <div class="footer-contact">
+        <p><a href="mailto:hello@mainstreetdigital.com">hello@mainstreetdigital.com</a></p>
+        <p><a href="tel:+17175550100">(717) 555-0100</a></p>
+        <p>Lancaster &amp; York County, PA</p>
+      </div>
+    </div>
+    <div class="footer-bottom-inner">
+      <p>© 2026 Main Street Digital. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+

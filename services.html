@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Main Street Digital</title>
+  <meta name="description" content="Transparent pricing for social media marketing and website design. No fluff — just the right services at the right price for local businesses." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Services-page-only styles ────────────────────────── */
+    .social-media-section { background: var(--light); }
+    .website-section      { background: var(--white); }
+
+    /* Section dividers with label */
+    .service-section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .service-section-header h2 {
+      margin: 0.5rem 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SHARED NAVIGATION
+  ══════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="Main Street Digital — Home">
+        <img src="logos/logo-nav-transparent.png" alt="Main Street Digital">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Work With Us</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-primary nav-cta">Get a Free Consult</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Work With Us</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary btn-full">Get a Free Consult</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── PAGE HERO ─────────────────────────────────────── -->
+    <section class="page-hero" aria-labelledby="services-heading">
+      <div class="page-hero-content">
+        <h1 id="services-heading">Services Built for<br>Local Business</h1>
+        <p>No fluff. No retainers you don't need. Just the right services at the right price to help your business grow.</p>
+      </div>
+    </section>
+
+    <!-- ── SOCIAL MEDIA MARKETING ─────────────────────────── -->
+    <section class="social-media-section" aria-labelledby="social-heading" id="social-media">
+      <div class="container">
+        <div class="service-section-header">
+          <span class="section-label">Social Media Marketing</span>
+          <h2 id="social-heading">Consistent. On-Brand. Every Week.</h2>
+          <p class="services-intro">
+            We manage your social presence so you can focus on running your business.
+            From content creation to community management — done for you, every week,
+            with strategy built in from day one.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Tier 1: Social Starter -->
+          <div class="pricing-card">
+            <p class="pricing-tier">Tier 1</p>
+            <h3>Social Starter</h3>
+            <div class="pricing-amount">$497<span>/mo</span></div>
+            <p class="pricing-desc">Perfect for businesses ready to show up consistently and build their presence from a solid foundation.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">What's included</p>
+            <ul class="pricing-features">
+              <li>2 platforms managed</li>
+              <li>8 custom posts per month</li>
+              <li>Content calendar</li>
+              <li>Monthly performance report</li>
+              <li>Hashtag research &amp; optimization</li>
+              <li>Comment &amp; message responses</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+
+          <!-- Tier 2: Social Growth (Featured) -->
+          <div class="pricing-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <p class="pricing-tier">Tier 2</p>
+            <h3>Social Growth</h3>
+            <div class="pricing-amount">$997<span>/mo</span></div>
+            <p class="pricing-desc">For businesses ready to scale — more content, paid reach, and a clear view of what's working.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Everything in Starter, plus</p>
+            <ul class="pricing-features">
+              <li>3 platforms managed</li>
+              <li>16 custom posts per month</li>
+              <li>2 video reels per month</li>
+              <li>Paid ad management (up to $500 ad spend included)</li>
+              <li>Analytics dashboard access</li>
+              <li>Competitor benchmarking</li>
+              <li>Full community management</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+
+          <!-- Tier 3: Social Pro -->
+          <div class="pricing-card">
+            <p class="pricing-tier">Tier 3</p>
+            <h3>Social Pro</h3>
+            <div class="pricing-amount">$1,997<span>/mo</span></div>
+            <p class="pricing-desc">A full-service social media department without the overhead. For businesses ready to dominate their local market.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Everything in Growth, plus</p>
+            <ul class="pricing-features">
+              <li>Up to 5 platforms managed</li>
+              <li>24 custom posts per month</li>
+              <li>4 video reels per month</li>
+              <li>Paid ads (up to $1,500 ad spend included)</li>
+              <li>Weekly check-in with account manager</li>
+              <li>Seasonal campaign planning</li>
+              <li>Influencer coordination</li>
+              <li>Bi-monthly strategy review</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WEBSITE DESIGN ─────────────────────────────────── -->
+    <section class="website-section" aria-labelledby="web-heading" id="websites">
+      <div class="container">
+        <div class="service-section-header">
+          <span class="section-label">Website Design &amp; Development</span>
+          <h2 id="web-heading">Your Website Should Work as Hard as You Do.</h2>
+          <p class="services-intro">
+            Every website we build is designed from the customer's perspective first —
+            fast-loading, mobile-first, and structured to turn visitors into leads.
+            No bloated page builders. No cookie-cutter templates.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Tier 1: Launch Site -->
+          <div class="pricing-card">
+            <p class="pricing-tier">Tier 1</p>
+            <h3>Launch Site</h3>
+            <div class="pricing-amount">$1,500</div>
+            <p class="pricing-desc">Get online with a professional, polished site that makes the right first impression. Delivered in 2–3 weeks.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">What's included</p>
+            <ul class="pricing-features">
+              <li>Up to 5 pages</li>
+              <li>Mobile-responsive design</li>
+              <li>Contact form setup</li>
+              <li>Google Business integration</li>
+              <li>Basic on-page SEO</li>
+              <li>Domain &amp; hosting setup assistance</li>
+              <li>2 revision rounds</li>
+              <li>Delivered in 2–3 weeks</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+
+          <!-- Tier 2: Growth Site (Featured) -->
+          <div class="pricing-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <p class="pricing-tier">Tier 2</p>
+            <h3>Growth Site</h3>
+            <div class="pricing-amount">$3,500</div>
+            <p class="pricing-desc">A fully strategic website with the tools to track, capture, and grow your leads. Delivered in 3–5 weeks.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Everything in Launch, plus</p>
+            <ul class="pricing-features">
+              <li>Up to 10 pages</li>
+              <li>Blog / CMS integration</li>
+              <li>Lead capture forms</li>
+              <li>Google Analytics + conversion tracking</li>
+              <li>Social media feed integration</li>
+              <li>SEO package (5 target keywords)</li>
+              <li>3 revision rounds</li>
+              <li>Delivered in 3–5 weeks</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+
+          <!-- Tier 3: Full-Service Site -->
+          <div class="pricing-card">
+            <p class="pricing-tier">Tier 3</p>
+            <h3>Full-Service Site</h3>
+            <div class="pricing-amount">$6,500<span>+</span></div>
+            <p class="pricing-desc">A custom-built digital flagship — designed, developed, and launched with a dedicated project manager. Delivered in 5–8 weeks.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Everything in Growth, plus</p>
+            <ul class="pricing-features">
+              <li>Fully custom design</li>
+              <li>Unlimited pages</li>
+              <li>E-commerce or booking integration</li>
+              <li>Advanced SEO architecture</li>
+              <li>Accessibility compliance (WCAG 2.1 AA)</li>
+              <li>Dedicated project manager</li>
+              <li>4 revision rounds</li>
+              <li>30-day post-launch support</li>
+              <li>Delivered in 5–8 weeks</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ADD-ONS ─────────────────────────────────────────── -->
+    <section class="addons-section" aria-labelledby="addons-heading" id="add-ons">
+      <div class="container">
+        <div class="service-section-header">
+          <span class="section-label">Add-On Services</span>
+          <h2 id="addons-heading">Build the Right Stack for Your Business.</h2>
+          <p class="services-intro">
+            Mix and match add-ons to complement your core package —
+            or start here if you just need one specific thing done right.
+          </p>
+        </div>
+
+        <div class="addons-grid">
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Website Maintenance</div>
+              <div class="addon-type">Monthly retainer</div>
+            </div>
+            <div class="addon-price">$149/mo</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Google Ads Management</div>
+              <div class="addon-type">+ ad spend</div>
+            </div>
+            <div class="addon-price">$350/mo</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Email Newsletter Management</div>
+              <div class="addon-type">Monthly retainer</div>
+            </div>
+            <div class="addon-price">$250/mo</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Reputation Management</div>
+              <div class="addon-type">Monthly retainer</div>
+            </div>
+            <div class="addon-price">$199/mo</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Brand Photography Package</div>
+              <div class="addon-type">One-time</div>
+            </div>
+            <div class="addon-price">$795</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Logo &amp; Brand Identity</div>
+              <div class="addon-type">One-time, custom</div>
+            </div>
+            <div class="addon-price">from $595</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BANNER ─────────────────────────────────────── -->
+    <section class="cta-banner" aria-labelledby="services-cta-heading">
+      <div class="container">
+        <h2 id="services-cta-heading">Not sure which package is right?</h2>
+        <p>Let's figure it out together. A free 30-minute call is all it takes to know exactly what your business needs — and what it doesn't.</p>
+        <a href="contact.html" class="btn btn-white btn-lg">Book Your Free Consult</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SHARED FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="logos/logo-nav-transparent.png" alt="Main Street Digital">
+        </a>
+        <p class="footer-tagline">We Show Up. You Stand Out.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Work With Us</a>
+      </nav>
+
+      <div class="footer-contact">
+        <p><a href="mailto:hello@mainstreetdigital.com">hello@mainstreetdigital.com</a></p>
+        <p><a href="tel:+17175550100">(717) 555-0100</a></p>
+        <p>Lancaster &amp; York County, PA</p>
+      </div>
+    </div>
+    <div class="footer-bottom-inner">
+      <p>© 2026 Main Street Digital. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
