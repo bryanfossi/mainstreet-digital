@@ -7,39 +7,6 @@
 (function () {
   'use strict';
 
-  /* ── Favicon: Canvas-drawn "MSD" ─────────────────────────── */
-  function setFavicon() {
-    try {
-      const canvas = document.createElement('canvas');
-      canvas.width = 32;
-      canvas.height = 32;
-      const ctx = canvas.getContext('2d');
-
-      // Background
-      ctx.fillStyle = '#0A1628';
-      ctx.fillRect(0, 0, 32, 32);
-
-      // Blue left bar accent
-      ctx.fillStyle = '#2B7FFF';
-      ctx.fillRect(0, 0, 5, 32);
-
-      // Text
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = 'bold 12px Inter, Arial, sans-serif';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText('MSD', 18, 17);
-
-      const link = document.createElement('link');
-      link.rel = 'icon';
-      link.type = 'image/png';
-      link.href = canvas.toDataURL('image/png');
-      document.head.appendChild(link);
-    } catch (e) {
-      // Silently fail if canvas not supported
-    }
-  }
-
   /* ── Sticky Header Shadow ────────────────────────────────── */
   function initStickyHeader() {
     const header = document.getElementById('site-header');
@@ -231,7 +198,6 @@
 
   /* ── Init ─────────────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', () => {
-    setFavicon();
     initStickyHeader();
     initMobileMenu();
     setActiveNav();
