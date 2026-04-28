@@ -177,6 +177,9 @@
     const player = document.getElementById('hero-video-player');
     if (!player) return;
 
+    // Skip on mobile — the video is hidden via CSS and we don't want to fetch it.
+    if (window.matchMedia && window.matchMedia('(max-width: 767px)').matches) return;
+
     const playlistAttr = player.getAttribute('data-playlist') || '';
     const playlist = playlistAttr
       .split(',')

@@ -489,6 +489,12 @@ section {
   z-index: 0;
 }
 
+/* Hide hero video on mobile — saves bandwidth/battery and avoids iOS autoplay issues.
+   The hero falls back to the navy backdrop, diagonal-line texture, and blue glow. */
+@media (max-width: 767px) {
+  .hero-video-stack { display: none; }
+}
+
 .hero-video-player {
   position: absolute;
   inset: 0;
