@@ -1262,8 +1262,8 @@ section {
 
 /* Avatar circle with initials */
 .team-avatar {
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background: var(--navy);
   border: 3px solid var(--gold);
@@ -1271,7 +1271,7 @@ section {
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: var(--gold);
   letter-spacing: 0.05em;
@@ -1279,8 +1279,21 @@ section {
   overflow: hidden;
 }
 
-/* Photo placeholder label */
-.team-avatar::after {
+/* Real photo variant */
+.team-avatar.has-photo {
+  background: transparent;
+}
+
+.team-avatar.has-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Photo placeholder label (only shows on initials avatars) */
+.team-avatar:not(.has-photo)::after {
   content: attr(data-label);
   position: absolute;
   bottom: -30px;
