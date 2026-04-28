@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — Main Street Digital Services</title>
   <meta name="description" content="Transparent pricing for social media marketing and website design. No fluff — just the right services at the right price for local businesses." />
+  <link rel="canonical" href="https://mainstreetdigitalservices.com/services.html" />
+
+  <!-- Fonts (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
@@ -45,6 +51,65 @@
       margin: 0.5rem 0 0;
     }
   </style>
+
+  <!-- Structured Data: Services + Offers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://mainstreetdigitalservices.com/services.html#social-media",
+        "serviceType": "Social Media Marketing",
+        "name": "Social Media Marketing for Local Businesses",
+        "provider": { "@id": "https://mainstreetdigitalservices.com/#business" },
+        "areaServed": [
+          "Lancaster County, PA",
+          "Dauphin County, PA",
+          "Cumberland County, PA",
+          "Berks County, PA"
+        ],
+        "description": "Consistent, on-brand social content management. Custom posts, paid ads, and community management for local businesses.",
+        "offers": [
+          { "@type": "Offer", "name": "Social Starter", "price": "497", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Social Growth",  "price": "997", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Social Pro",     "price": "1997", "priceCurrency": "USD" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://mainstreetdigitalservices.com/services.html#web-design",
+        "serviceType": "Website Design",
+        "name": "Website Design for Local Businesses",
+        "provider": { "@id": "https://mainstreetdigitalservices.com/#business" },
+        "areaServed": [
+          "Lancaster County, PA",
+          "Dauphin County, PA",
+          "Cumberland County, PA",
+          "Berks County, PA"
+        ],
+        "description": "Mobile-first websites built to convert visitors into leads. From a $1,500 launch site to fully custom flagship builds.",
+        "offers": [
+          { "@type": "Offer", "name": "Launch Site",       "price": "1500", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Growth Site",       "price": "3500", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Full-Service Site", "price": "6500", "priceCurrency": "USD" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://mainstreetdigitalservices.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://mainstreetdigitalservices.com/services.html" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -56,7 +121,7 @@
   <header class="site-header" id="site-header">
     <nav class="nav-inner" aria-label="Main navigation">
       <a href="index.html" class="logo" aria-label="Main Street Digital Services — Home">
-        <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services">
+        <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services" width="1536" height="1024" fetchpriority="high">
       </a>
 
       <ul class="nav-links" role="list">
@@ -347,7 +412,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services">
+          <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services" width="1536" height="1024" loading="lazy">
         </a>
         <p class="footer-tagline">We Show Up. You Stand Out.</p>
       </div>

@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Main Street Digital Services — We Show Up. You Stand Out.</title>
-  <meta name="description" content="Main Street Digital Services helps local businesses build professional online presences. Websites that convert and social media that gets noticed. Serving Lancaster, Dauphin, Cumberland & Berks Counties, PA." />
+  <meta name="description" content="Lancaster, Dauphin, Cumberland & Berks Counties web design and social media marketing for local PA businesses. Free 30-minute consultation." />
+  <link rel="canonical" href="https://mainstreetdigitalservices.com/" />
+
+  <!-- Fonts (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
@@ -35,6 +41,72 @@
     /* ── Home-page-only overrides ─────────────────────────── */
     .social-proof-bar { padding-top: 1.75rem; padding-bottom: 1.75rem; }
   </style>
+
+  <!-- Structured Data: ProfessionalService / LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://mainstreetdigitalservices.com/#business",
+    "name": "Main Street Digital Services",
+    "alternateName": "MSDS",
+    "url": "https://mainstreetdigitalservices.com/",
+    "logo": "https://mainstreetdigitalservices.com/logos/MSDS%20Transparent%202.png",
+    "image": "https://mainstreetdigitalservices.com/logos/og-image.jpg",
+    "description": "Web design and social media marketing for local businesses in Lancaster, Dauphin, Cumberland and Berks Counties, Pennsylvania. Hands-on, no long contracts.",
+    "slogan": "We Show Up. You Stand Out.",
+    "telephone": "+1-717-875-2665",
+    "email": "bryan@mainstreetdigitalservices.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "PA",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "Lancaster County, Pennsylvania" },
+      { "@type": "AdministrativeArea", "name": "Dauphin County, Pennsylvania" },
+      { "@type": "AdministrativeArea", "name": "Cumberland County, Pennsylvania" },
+      { "@type": "AdministrativeArea", "name": "Berks County, Pennsylvania" }
+    ],
+    "knowsAbout": [
+      "Web Design",
+      "Website Development",
+      "Social Media Marketing",
+      "Search Engine Optimization",
+      "Google Business Profile",
+      "Pay-Per-Click Advertising",
+      "Email Marketing",
+      "Brand Identity"
+    ],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Bryan Fossi",
+        "jobTitle": "Founder"
+      },
+      {
+        "@type": "Person",
+        "name": "Jared Witwer",
+        "jobTitle": "President of Client & Digital Services"
+      }
+    ],
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://mainstreetdigitalservices.com/#website",
+    "url": "https://mainstreetdigitalservices.com/",
+    "name": "Main Street Digital Services",
+    "publisher": { "@id": "https://mainstreetdigitalservices.com/#business" },
+    "inLanguage": "en-US"
+  }
+  </script>
 </head>
 <body>
 
@@ -46,7 +118,7 @@
   <header class="site-header" id="site-header">
     <nav class="nav-inner" aria-label="Main navigation">
       <a href="index.html" class="logo" aria-label="Main Street Digital Services — Home">
-        <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services">
+        <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services" width="1536" height="1024" fetchpriority="high">
       </a>
 
       <ul class="nav-links" role="list">
@@ -314,7 +386,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services">
+          <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services" width="1536" height="1024" loading="lazy">
         </a>
         <p class="footer-tagline">We Show Up. You Stand Out.</p>
       </div>

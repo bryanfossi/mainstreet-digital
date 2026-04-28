@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Main Street Digital Services</title>
   <meta name="description" content="Meet the team behind Main Street Digital Services. Built by people who are tired of agencies that overpromise and underdeliver. Hands-on, honest, and in it for the long run." />
+  <link rel="canonical" href="https://mainstreetdigitalservices.com/about.html" />
+
+  <!-- Fonts (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
@@ -31,6 +37,45 @@
   <meta name="theme-color" content="#0A1628" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data: Founders -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://mainstreetdigitalservices.com/about.html#bryan-fossi",
+        "name": "Bryan Fossi",
+        "jobTitle": "Founder",
+        "image": "https://mainstreetdigitalservices.com/team/bryan-fossi.jpg",
+        "worksFor": { "@id": "https://mainstreetdigitalservices.com/#business" },
+        "description": "Founder of Main Street Digital Services. Background in enterprise data and AI strategy, focused on bringing that discipline to local business marketing."
+      },
+      {
+        "@type": "Person",
+        "@id": "https://mainstreetdigitalservices.com/about.html#jared-witwer",
+        "name": "Jared Witwer",
+        "jobTitle": "President of Client & Digital Services",
+        "image": "https://mainstreetdigitalservices.com/team/jared-witwer.jpg",
+        "worksFor": { "@id": "https://mainstreetdigitalservices.com/#business" },
+        "description": "Leads day-to-day client relationships and content delivery at Main Street Digital Services."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",  "item": "https://mainstreetdigitalservices.com/" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://mainstreetdigitalservices.com/about.html" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -42,7 +87,7 @@
   <header class="site-header" id="site-header">
     <nav class="nav-inner" aria-label="Main navigation">
       <a href="index.html" class="logo" aria-label="Main Street Digital Services — Home">
-        <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services">
+        <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services" width="1536" height="1024" fetchpriority="high">
       </a>
 
       <ul class="nav-links" role="list">
@@ -245,7 +290,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-          <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services">
+          <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services" width="1536" height="1024" loading="lazy">
         </a>
         <p class="footer-tagline">We Show Up. You Stand Out.</p>
       </div>

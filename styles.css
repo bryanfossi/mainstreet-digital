@@ -4,8 +4,8 @@
    Mobile-first. No external dependencies except Google Fonts.
    ============================================================ */
 
-/* ─── Google Fonts ─────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Inter font is loaded via <link> in each HTML file's <head>
+   (faster than @import — non-blocking, parallel with this stylesheet) */
 
 /* ─── CSS Custom Properties ─────────────────────────────────── */
 :root {
