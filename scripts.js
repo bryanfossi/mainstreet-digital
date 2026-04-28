@@ -75,12 +75,21 @@
 
   /* ── Active Nav Link ─────────────────────────────────────── */
   function setActiveNav() {
-    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+    // Normalize: strip trailing slash, .html extension, and ensure leading slash.
+    function normalize(p) {
+      if (!p) return '/';
+      p = p.replace(/\.html$/, '').replace(/\/$/, '');
+      if (p === '' || p === '/index') return '/';
+      if (!p.startsWith('/')) p = '/' + p;
+      return p;
+    }
+
+    const currentPath = normalize(window.location.pathname);
     const allNavLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
 
     allNavLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === currentFile || (currentFile === '' && href === 'index.html')) {
+      const linkPath = normalize(link.getAttribute('href'));
+      if (linkPath === currentPath) {
         link.classList.add('active');
       }
     });

@@ -7,19 +7,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mainstreetdigitalservices.com/services.html</loc>
+    <loc>https://mainstreetdigitalservices.com/services</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mainstreetdigitalservices.com/contact.html</loc>
+    <loc>https://mainstreetdigitalservices.com/contact</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mainstreetdigitalservices.com/about.html</loc>
+    <loc>https://mainstreetdigitalservices.com/about</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

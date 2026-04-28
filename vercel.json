@@ -1,6 +1,8 @@
 {
   "buildCommand": null,
   "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/videos/(.*).mp4",
