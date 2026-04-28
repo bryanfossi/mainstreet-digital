@@ -847,7 +847,7 @@ section {
   stroke-width: 2.5;
 }
 
-.trust-item h4 {
+.trust-item h3 {
   font-size: 1rem;
   margin-bottom: 0.35rem;
   color: var(--text-dark);
@@ -1467,164 +1467,79 @@ section {
   .step-number { position: relative; z-index: 1; }
 }
 
-/* ─── Contact Form ───────────────────────────────────────────── */
-.contact-form-section {
+/* ─── Contact — Book a Time ──────────────────────────────────── */
+.book-section {
   background: var(--light);
 }
 
-.contact-form-wrap {
-  max-width: 720px;
-  margin-inline: auto;
+.book-section .section-header {
+  margin-bottom: 2.5rem;
+}
+
+.book-cta-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
   background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 2.5rem;
+  border: 1px solid rgba(10, 22, 40, 0.08);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
   box-shadow: var(--shadow-sm);
 }
 
-.form-row {
-  display: grid;
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.form-row.two-col {
-  grid-template-columns: 1fr 1fr;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.form-row + .form-group { /* handled via margin-bottom */ }
-
-label {
-  font-size: 0.85rem;
-  font-weight: 600;
+.book-cta-wrap h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
   color: var(--text-dark);
 }
 
-label .required {
-  color: var(--blue);
-  margin-left: 2px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  font-size: 0.95rem;
-  color: var(--text-dark);
-  background: var(--white);
-  transition: border-color var(--transition), box-shadow var(--transition);
-  outline: none;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.85rem center;
-  padding-right: 2.5rem;
-  cursor: pointer;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(43, 127, 255, 0.12);
-}
-
-input.error, select.error, textarea.error {
-  border-color: #EF4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-}
-
-.field-error {
-  color: #EF4444;
-  font-size: 0.78rem;
-  font-weight: 500;
-  margin-top: 0.25rem;
-  display: none;
-}
-
-.field-error.visible { display: block; }
-
-textarea {
-  min-height: 130px;
-  resize: vertical;
-  line-height: 1.6;
-}
-
-.form-submit {
-  padding: 1rem 2rem;
-  background: var(--blue);
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: var(--radius-pill);
-  width: 100%;
-  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-  box-shadow: 0 4px 14px rgba(43, 127, 255, 0.3);
-  cursor: pointer;
-  border: none;
-}
-
-.form-submit:hover {
-  background: #1a6ef0;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(43, 127, 255, 0.4);
-}
-
-/* Success message */
-.form-success {
-  display: none;
-  text-align: center;
-  padding: 3rem 2rem;
-}
-
-.form-success.visible { display: block; }
-
-.success-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: rgba(43, 127, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
-}
-
-.success-icon svg {
-  width: 36px;
-  height: 36px;
-  stroke: var(--blue);
-  stroke-width: 2.5;
-}
-
-.form-success h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-}
-
-.form-success p {
+.book-cta-wrap > p {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.65;
+  margin: 0 0 1.75rem;
+  font-size: 1rem;
 }
 
-@media (max-width: 480px) {
-  .form-row.two-col { grid-template-columns: 1fr; }
-  .contact-form-wrap { padding: 1.75rem 1.25rem; }
+.book-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.05rem;
+  padding: 1rem 1.75rem;
+}
+
+.book-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.book-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 2.75rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(10, 22, 40, 0.08);
+  line-height: 1.5;
+}
+
+.book-note a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.book-note a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 540px) {
+  .book-cta-wrap {
+    padding: 2rem 1.25rem;
+  }
+  .book-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ─── Contact Info Strip ─────────────────────────────────────── */
@@ -1666,7 +1581,7 @@ textarea {
   stroke-width: 1.75;
 }
 
-.contact-info-item h4 {
+.contact-info-item h3 {
   color: rgba(255,255,255,0.5);
   font-size: 0.72rem;
   font-weight: 600;
@@ -1716,6 +1631,25 @@ textarea {
   outline: 3px solid var(--blue);
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+/* Skip-to-content link — visible only on keyboard focus */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0.5rem;
+  z-index: 10000;
+  background: var(--white);
+  color: var(--navy);
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-md);
+}
+
+.skip-link:focus {
+  left: 0.5rem;
 }
 
 /* ─── Utility ────────────────────────────────────────────────── */
