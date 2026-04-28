@@ -1480,6 +1480,89 @@ section {
   .step-number { position: relative; z-index: 1; }
 }
 
+/* ─── FAQ Section ────────────────────────────────────────────── */
+.faq-section {
+  background: var(--white);
+}
+
+.faq-list {
+  max-width: 760px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.faq-item[open] {
+  border-color: rgba(43, 127, 255, 0.4);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '';
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+  transform: rotate(45deg);
+  transition: transform var(--transition);
+  margin-bottom: 4px;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.faq-item summary:hover {
+  color: var(--blue);
+}
+
+.faq-item .faq-answer {
+  padding: 0 1.5rem 1.4rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.faq-item .faq-answer p + p {
+  margin-top: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-item summary::after {
+    transition: none;
+  }
+}
+
 /* ─── Contact — Book a Time ──────────────────────────────────── */
 .book-section {
   background: var(--light);

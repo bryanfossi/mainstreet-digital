@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Main Street Digital Services</title>
+  <meta name="description" content="The page you were looking for doesn't exist. Head back to Main Street Digital Services to find what you need." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Fonts (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <meta name="apple-mobile-web-app-title" content="Main Street Digital" />
+  <meta name="theme-color" content="#0A1628" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .notfound-hero {
+      min-height: calc(100vh - var(--header-h));
+      background: var(--navy);
+      padding: 6rem 1.25rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .notfound-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -55deg,
+        transparent 0px,
+        transparent 38px,
+        rgba(43, 127, 255, 0.05) 38px,
+        rgba(43, 127, 255, 0.05) 39px
+      );
+      pointer-events: none;
+    }
+
+    .notfound-content {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin-inline: auto;
+    }
+
+    .notfound-code {
+      font-size: clamp(5rem, 14vw, 9rem);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--gold);
+      letter-spacing: -0.04em;
+      margin-bottom: 0.5rem;
+      opacity: 0.9;
+    }
+
+    .notfound-content h1 {
+      color: var(--white);
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      margin-bottom: 1rem;
+    }
+
+    .notfound-content p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+      max-width: 520px;
+      margin-inline: auto;
+    }
+
+    .notfound-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .notfound-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem 2rem;
+      justify-content: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .notfound-links a {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+
+    .notfound-links a:hover {
+      color: var(--blue);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="/#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="/" class="logo" aria-label="Main Street Digital Services — Home">
+        <img src="/logos/MSDS Transparent 2.png" alt="Main Street Digital Services" width="1536" height="1024" fetchpriority="high">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Work With Us</a></li>
+      </ul>
+
+      <a href="/contact.html" class="btn btn-primary nav-cta">Book a Free Consult</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Work With Us</a></li>
+    </ul>
+    <a href="/contact.html" class="btn btn-primary btn-full">Book a Free Consult</a>
+  </nav>
+
+  <main id="main-content">
+    <section class="notfound-hero" aria-labelledby="notfound-heading">
+      <div class="notfound-content">
+        <div class="notfound-code" aria-hidden="true">404</div>
+        <h1 id="notfound-heading">This page took a detour off Main Street.</h1>
+        <p>The link you followed may be broken, or the page may have moved. Don't sweat it — we'll get you back on track.</p>
+
+        <div class="notfound-cta-group">
+          <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
+          <a href="/contact.html" class="btn btn-outline-white btn-lg">Book a Free Consult</a>
+        </div>
+
+        <div class="notfound-links">
+          <a href="/services.html">View Services &amp; Pricing</a>
+          <a href="/about.html">Meet the Team</a>
+          <a href="mailto:bryan@mainstreetdigitalservices.com">Email Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>
