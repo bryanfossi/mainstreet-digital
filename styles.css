@@ -455,6 +455,12 @@ section {
   font-size: 0.8rem;
 }
 
+/* On mobile (single-column), surface contact info above the redundant nav */
+@media (max-width: 767px) {
+  .footer-contact { order: 2; }
+  .footer-nav     { order: 3; }
+}
+
 @media (min-width: 768px) {
   .footer-inner {
     grid-template-columns: 1.4fr 1fr 1fr;
