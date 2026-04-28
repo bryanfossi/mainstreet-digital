@@ -211,18 +211,42 @@
       }
 
       if (valid) {
-        // Simulate async submission
         const submitBtn = form.querySelector('.form-submit');
+        const originalLabel = submitBtn.textContent;
         submitBtn.textContent = 'Sending…';
         submitBtn.disabled = true;
 
-        setTimeout(() => {
-          form.style.display = 'none';
-          if (successEl) {
-            successEl.classList.add('visible');
-            successEl.querySelector('h3').focus();
-          }
-        }, 900);
+        const payload = {
+          first_name: firstName.value.trim(),
+          last_name: lastName.value.trim(),
+          business_name: business.value.trim(),
+          email: email.value.trim(),
+          phone: phone.value.trim(),
+          interest: interest.value,
+          message: message.value.trim(),
+        };
+
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+          .then(async (res) => {
+            if (!res.ok) {
+              const data = await res.json().catch(() => ({}));
+              throw new Error(data.error || 'Request failed.');
+            }
+            form.style.display = 'none';
+            if (successEl) {
+              successEl.classList.add('visible');
+              successEl.querySelector('h3').focus();
+            }
+          })
+          .catch((err) => {
+            submitBtn.textContent = originalLabel;
+            submitBtn.disabled = false;
+            showError(message, 'Sorry — something went wrong sending your request. Please try again or email bryan@mainstreetdigitalservices.com directly.');
+          });
       }
     });
   }
