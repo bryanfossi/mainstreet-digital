@@ -51,9 +51,92 @@
     .service-section-header h2 {
       margin: 0.5rem 0 0;
     }
+
+    /* "What's included / Who it's for / Timeline / Outcomes" detail grid */
+    .service-detail-grid {
+      display: grid;
+      gap: 1.25rem;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+      .service-detail-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    }
+    .service-detail-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius-md);
+      padding: 1.75rem 1.5rem;
+    }
+    .website-section .service-detail-block { background: var(--light); }
+    .service-detail-block h3 {
+      font-size: 1rem;
+      margin: 0 0 0.6rem;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+    .service-detail-block p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+    .service-detail-block ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .service-detail-block li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.93rem;
+      color: var(--text-dark);
+      line-height: 1.55;
+    }
+    .service-detail-block li::before {
+      content: '';
+      flex-shrink: 0;
+      margin-top: 7px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    /* Service section CTA row */
+    .service-cta-row {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    /* "More services" teaser */
+    .more-services {
+      background: var(--white);
+      padding: 2.5rem 1.25rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .more-services p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .more-services a {
+      color: var(--blue);
+      font-weight: 600;
+    }
   </style>
 
-  <!-- Structured Data: Services + Offers -->
+  <!-- Structured Data: Services (descriptions only — pricing schema lives on /pricing and homepage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,7 +145,7 @@
         "@type": "Service",
         "@id": "https://mainstreetdigitalservices.com/services#social-media",
         "serviceType": "Social Media Marketing",
-        "name": "Social Media Marketing for Local Businesses",
+        "name": "Social Media Marketing for Lancaster County Businesses",
         "provider": { "@id": "https://mainstreetdigitalservices.com/#business" },
         "areaServed": [
           "Lancaster County, PA",
@@ -70,18 +153,13 @@
           "Cumberland County, PA",
           "Berks County, PA"
         ],
-        "description": "Consistent, on-brand social content management. Custom posts, paid ads, and community management for local businesses.",
-        "offers": [
-          { "@type": "Offer", "name": "Social Starter", "price": "497", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Social Growth",  "price": "997", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Social Pro",     "price": "1997", "priceCurrency": "USD" }
-        ]
+        "description": "Consistent, on-brand social media management for local Lancaster County businesses. Custom posts, content calendar, paid ad management, video reels, and community engagement — done for you, every week."
       },
       {
         "@type": "Service",
         "@id": "https://mainstreetdigitalservices.com/services#web-design",
         "serviceType": "Website Design",
-        "name": "Website Design for Local Businesses",
+        "name": "Website Design for Lancaster County Businesses",
         "provider": { "@id": "https://mainstreetdigitalservices.com/#business" },
         "areaServed": [
           "Lancaster County, PA",
@@ -89,12 +167,7 @@
           "Cumberland County, PA",
           "Berks County, PA"
         ],
-        "description": "Mobile-first websites built to convert visitors into leads. From a $1,500 launch site to fully custom flagship builds.",
-        "offers": [
-          { "@type": "Offer", "name": "Launch Site",       "price": "1500", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Growth Site",       "price": "3500", "priceCurrency": "USD" },
-          { "@type": "Offer", "name": "Full-Service Site", "price": "6500", "priceCurrency": "USD" }
-        ]
+        "description": "Mobile-first websites built to convert visitors into leads. Hand-built, fast-loading, SEO-ready, with conversion tracking and lead capture from day one. You own everything we build."
       }
     ]
   }
@@ -239,69 +312,39 @@
           </p>
         </div>
 
-        <div class="pricing-grid">
+        <div class="service-detail-grid">
 
-          <!-- Tier 1: Social Starter -->
-          <div class="pricing-card">
-            <p class="pricing-tier">Tier 1</p>
-            <h3>Social Starter</h3>
-            <div class="pricing-amount">$497<span>/mo</span></div>
-            <p class="pricing-desc">Perfect for businesses ready to show up consistently and build their presence from a solid foundation.</p>
-            <div class="pricing-divider"></div>
-            <p class="pricing-includes">What's included</p>
-            <ul class="pricing-features">
-              <li>2 platforms managed</li>
-              <li>8 custom posts per month</li>
-              <li>Content calendar</li>
-              <li>Monthly performance report</li>
-              <li>Hashtag research &amp; optimization</li>
-              <li>Comment &amp; message responses</li>
+          <div class="service-detail-block">
+            <h3>What's included</h3>
+            <ul>
+              <li>Custom posts written, designed, and scheduled in your brand voice</li>
+              <li>A monthly content calendar you can see ahead of time</li>
+              <li>Hashtag research and platform-specific optimization</li>
+              <li>Comment and message responses (community management)</li>
+              <li>Monthly performance reports — not just vanity metrics</li>
+              <li>Video reels, paid ad management, and analytics dashboards on higher tiers</li>
             </ul>
-            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
           </div>
 
-          <!-- Tier 2: Social Growth (Featured) -->
-          <div class="pricing-card featured">
-            <div class="featured-badge">Most Popular</div>
-            <p class="pricing-tier">Tier 2</p>
-            <h3>Social Growth</h3>
-            <div class="pricing-amount">$997<span>/mo</span></div>
-            <p class="pricing-desc">For businesses ready to scale — more content, paid reach, and a clear view of what's working.</p>
-            <div class="pricing-divider"></div>
-            <p class="pricing-includes">Everything in Starter, plus</p>
-            <ul class="pricing-features">
-              <li>3 platforms managed</li>
-              <li>16 custom posts per month</li>
-              <li>2 video reels per month</li>
-              <li>Paid ad management (ad spend billed separately)</li>
-              <li>Analytics dashboard access</li>
-              <li>Competitor benchmarking</li>
-              <li>Full community management</li>
-            </ul>
-            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          <div class="service-detail-block">
+            <h3>Who it's for</h3>
+            <p>Local Lancaster County businesses that know they need to be active on social but don't have the time, the team, or the playbook to do it consistently. Restaurants, retailers, service providers, professional offices — anyone who depends on local visibility and word-of-mouth.</p>
           </div>
 
-          <!-- Tier 3: Social Pro -->
-          <div class="pricing-card">
-            <p class="pricing-tier">Tier 3</p>
-            <h3>Social Pro</h3>
-            <div class="pricing-amount">$1,997<span>/mo</span></div>
-            <p class="pricing-desc">A full-service social media department without the overhead. For businesses ready to dominate their local market.</p>
-            <div class="pricing-divider"></div>
-            <p class="pricing-includes">Everything in Growth, plus</p>
-            <ul class="pricing-features">
-              <li>Up to 5 platforms managed</li>
-              <li>24 custom posts per month</li>
-              <li>4 video reels per month</li>
-              <li>Paid ads (ad spend billed separately)</li>
-              <li>Weekly check-in with account manager</li>
-              <li>Seasonal campaign planning</li>
-              <li>Influencer coordination</li>
-              <li>Bi-monthly strategy review</li>
-            </ul>
-            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          <div class="service-detail-block">
+            <h3>Typical timeline</h3>
+            <p>We're posting on your behalf within 2 weeks of starting. Month one is mostly setup — voice and tone alignment, content calendar planning, platform connections. From month two on, you're seeing the rhythm.</p>
           </div>
 
+          <div class="service-detail-block">
+            <h3>What you'll get out of it</h3>
+            <p>A consistent, professional social presence that keeps your business top-of-mind for the customers you already have and visible to the ones you're trying to reach. Real engagement with real people in your community — not bot-driven follower counts.</p>
+          </div>
+
+        </div>
+
+        <div class="service-cta-row">
+          <a href="/pricing#social-media" class="btn btn-primary btn-lg">See Social Media Pricing &rarr;</a>
         </div>
       </div>
     </section>
@@ -319,140 +362,47 @@
           </p>
         </div>
 
-        <div class="pricing-grid">
+        <div class="service-detail-grid">
 
-          <!-- Tier 1: Launch Site -->
-          <div class="pricing-card">
-            <p class="pricing-tier">Tier 1</p>
-            <h3>Launch Site</h3>
-            <div class="pricing-amount">$1,500</div>
-            <p class="pricing-desc">Get online with a professional, polished site that makes the right first impression. Delivered in 2–3 weeks.</p>
-            <div class="pricing-divider"></div>
-            <p class="pricing-includes">What's included</p>
-            <ul class="pricing-features">
-              <li>Up to 5 pages</li>
-              <li>Mobile-responsive design</li>
-              <li>Contact form setup</li>
-              <li>Google Business integration</li>
-              <li>Basic on-page SEO</li>
-              <li>Domain &amp; hosting setup assistance</li>
-              <li>2 revision rounds</li>
-              <li>Delivered in 2–3 weeks</li>
+          <div class="service-detail-block">
+            <h3>What's included</h3>
+            <ul>
+              <li>Mobile-first design built for phones first, then scaled up</li>
+              <li>Hand-coded — no bloated page builders or cookie-cutter templates</li>
+              <li>Contact forms, Google Business integration, and basic on-page SEO from day one</li>
+              <li>Help setting up your domain and hosting (in your name, you own it)</li>
+              <li>Multiple revision rounds — we don't ship until you're happy</li>
+              <li>Larger packages add a blog/CMS, lead capture, conversion tracking, e-commerce, and accessibility compliance</li>
             </ul>
-            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
           </div>
 
-          <!-- Tier 2: Growth Site (Featured) -->
-          <div class="pricing-card featured">
-            <div class="featured-badge">Most Popular</div>
-            <p class="pricing-tier">Tier 2</p>
-            <h3>Growth Site</h3>
-            <div class="pricing-amount">$3,500</div>
-            <p class="pricing-desc">A fully strategic website with the tools to track, capture, and grow your leads. Delivered in 3–5 weeks.</p>
-            <div class="pricing-divider"></div>
-            <p class="pricing-includes">Everything in Launch, plus</p>
-            <ul class="pricing-features">
-              <li>Up to 10 pages</li>
-              <li>Blog / CMS integration</li>
-              <li>Lead capture forms</li>
-              <li>Google Analytics + conversion tracking</li>
-              <li>Social media feed integration</li>
-              <li>SEO package (5 target keywords)</li>
-              <li>3 revision rounds</li>
-              <li>Delivered in 3–5 weeks</li>
-            </ul>
-            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          <div class="service-detail-block">
+            <h3>Who it's for</h3>
+            <p>Lancaster County businesses with no website, an outdated site that's hurting credibility, or a site that looks fine but doesn't actually generate leads. If your phone isn't ringing because of your website, this is for you.</p>
           </div>
 
-          <!-- Tier 3: Full-Service Site -->
-          <div class="pricing-card">
-            <p class="pricing-tier">Tier 3</p>
-            <h3>Full-Service Site</h3>
-            <div class="pricing-amount">$6,500<span>+</span></div>
-            <p class="pricing-desc">A custom-built digital flagship — designed, developed, and launched with a dedicated project manager. Delivered in 5–8 weeks.</p>
-            <div class="pricing-divider"></div>
-            <p class="pricing-includes">Everything in Growth, plus</p>
-            <ul class="pricing-features">
-              <li>Fully custom design</li>
-              <li>Unlimited pages</li>
-              <li>E-commerce or booking integration</li>
-              <li>Advanced SEO architecture</li>
-              <li>Accessibility compliance (WCAG 2.1 AA)</li>
-              <li>Dedicated project manager</li>
-              <li>4 revision rounds</li>
-              <li>30-day post-launch support</li>
-              <li>Delivered in 5–8 weeks</li>
-            </ul>
-            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          <div class="service-detail-block">
+            <h3>Typical timeline</h3>
+            <p>2 to 3 weeks for a focused launch site, 3 to 5 weeks for a strategic site with lead capture and SEO, 5 to 8 weeks for a fully custom flagship build. Every project gets a clear timeline up front in the proposal — and we hit our deadlines.</p>
           </div>
 
+          <div class="service-detail-block">
+            <h3>What you'll get out of it</h3>
+            <p>A website that earns the trust of every visitor in the first three seconds, loads fast on a phone, and turns lookers into leads — not just a digital business card. And you own every line of code we write.</p>
+          </div>
+
+        </div>
+
+        <div class="service-cta-row">
+          <a href="/pricing#websites" class="btn btn-primary btn-lg">See Website Pricing &rarr;</a>
         </div>
       </div>
     </section>
 
-    <!-- ── ADD-ONS ─────────────────────────────────────────── -->
-    <section class="addons-section" aria-labelledby="addons-heading" id="add-ons">
+    <!-- ── MORE SERVICES TEASER ────────────────────────────── -->
+    <section class="more-services" aria-label="More services">
       <div class="container">
-        <div class="service-section-header">
-          <span class="section-label">Add-On Services</span>
-          <h2 id="addons-heading">Build the Right Stack for Your Business.</h2>
-          <p class="services-intro">
-            Mix and match add-ons to complement your core package —
-            or start here if you just need one specific thing done right.
-          </p>
-        </div>
-
-        <div class="addons-grid">
-
-          <div class="addon-tile">
-            <div>
-              <div class="addon-name">Website Maintenance</div>
-              <div class="addon-type">Monthly retainer</div>
-            </div>
-            <div class="addon-price">$149/mo</div>
-          </div>
-
-          <div class="addon-tile">
-            <div>
-              <div class="addon-name">Google Ads Management</div>
-              <div class="addon-type">+ ad spend</div>
-            </div>
-            <div class="addon-price">$350/mo</div>
-          </div>
-
-          <div class="addon-tile">
-            <div>
-              <div class="addon-name">Email Newsletter Management</div>
-              <div class="addon-type">Monthly retainer</div>
-            </div>
-            <div class="addon-price">$250/mo</div>
-          </div>
-
-          <div class="addon-tile">
-            <div>
-              <div class="addon-name">Reputation Management</div>
-              <div class="addon-type">Monthly retainer</div>
-            </div>
-            <div class="addon-price">$199/mo</div>
-          </div>
-
-          <div class="addon-tile">
-            <div>
-              <div class="addon-name">Brand Photography Package</div>
-              <div class="addon-type">One-time</div>
-            </div>
-            <div class="addon-price">$795</div>
-          </div>
-
-          <div class="addon-tile">
-            <div>
-              <div class="addon-name">Logo &amp; Brand Identity</div>
-              <div class="addon-type">One-time, custom</div>
-            </div>
-            <div class="addon-price">from $595</div>
-          </div>
-
-        </div>
+        <p>Need something more specific? Logo design, Google Ads management, email marketing, brand photography, website maintenance, reputation management — see our <a href="/pricing#add-ons">full add-on services and pricing</a>.</p>
       </div>
     </section>
 
