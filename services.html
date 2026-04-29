@@ -52,55 +52,73 @@
       margin: 0.5rem 0 0;
     }
 
-    /* "What's included / Who it's for / Timeline / Outcomes" detail grid */
-    .service-detail-grid {
+    /* Single side-by-side block per service: narrative + What's included */
+    .service-block {
       display: grid;
-      gap: 1.25rem;
-      max-width: 920px;
+      gap: 2rem;
+      max-width: 940px;
       margin: 0 auto;
+      align-items: start;
     }
     @media (min-width: 768px) {
-      .service-detail-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+      .service-block { grid-template-columns: 1.15fr 1fr; gap: 3rem; }
     }
-    .service-detail-block {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--gold);
-      border-radius: var(--radius-md);
-      padding: 1.75rem 1.5rem;
+    .service-block-narrative p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
     }
-    .website-section .service-detail-block { background: var(--light); }
-    .service-detail-block h3 {
-      font-size: 1rem;
-      margin: 0 0 0.6rem;
+    .service-block-narrative p:last-of-type { margin-bottom: 1.5rem; }
+    .service-meta {
+      font-size: 0.92rem !important;
+      color: var(--text-muted) !important;
+      padding: 0.85rem 0;
+      margin: 0 0 1.5rem !important;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      line-height: 1.5 !important;
+    }
+    .service-meta strong {
       color: var(--text-dark);
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      font-size: 0.72rem;
       font-weight: 700;
+      margin-right: 0.5rem;
     }
-    .service-detail-block p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin: 0;
+    .service-block-list {
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      padding: 1.5rem 1.75rem;
+      border-radius: var(--radius-md);
     }
-    .service-detail-block ul {
+    .website-section .service-block-list { background: var(--light); }
+    .service-block-list h3 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+    .service-block-list ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 0.55rem;
+      gap: 0.6rem;
     }
-    .service-detail-block li {
+    .service-block-list li {
       display: flex;
       align-items: flex-start;
       gap: 0.6rem;
-      font-size: 0.93rem;
+      font-size: 0.95rem;
       color: var(--text-dark);
       line-height: 1.55;
     }
-    .service-detail-block li::before {
+    .service-block-list li::before {
       content: '';
       flex-shrink: 0;
       margin-top: 7px;
@@ -108,12 +126,6 @@
       height: 6px;
       border-radius: 50%;
       background: var(--blue);
-    }
-
-    /* Service section CTA row */
-    .service-cta-row {
-      text-align: center;
-      margin-top: 2.5rem;
     }
 
     /* "More services" teaser */
@@ -304,12 +316,16 @@
         <div class="service-section-header">
           <span class="section-label">Social Media Marketing</span>
           <h2 id="social-heading">Consistent. On-Brand. Every Week.</h2>
-          <p class="services-intro">Done for you, every week. <a href="/about">Bryan and Jared</a> run your account personally.</p>
         </div>
 
-        <div class="service-detail-grid">
-
-          <div class="service-detail-block">
+        <div class="service-block">
+          <div class="service-block-narrative">
+            <p>We run your social presence — every week — so you can focus on the rest of your business. Built for Lancaster County businesses that need to show up consistently but don't have the time, team, or playbook to do it themselves.</p>
+            <p>Real engagement with the customers in your community. Not vanity follower counts. <a href="/about">Bryan and Jared</a> run your account personally.</p>
+            <p class="service-meta"><strong>Timeline</strong>Posting within 2 weeks · full rhythm by month two.</p>
+            <a href="/pricing#social-media" class="btn btn-primary">See Social Media Pricing &rarr;</a>
+          </div>
+          <div class="service-block-list">
             <h3>What's included</h3>
             <ul>
               <li>Custom posts in your brand voice</li>
@@ -320,26 +336,6 @@
               <li>Video reels &amp; paid ads on higher tiers</li>
             </ul>
           </div>
-
-          <div class="service-detail-block">
-            <h3>Who it's for</h3>
-            <p>Lancaster County businesses that need to show up on social but don't have the time, team, or playbook to do it consistently.</p>
-          </div>
-
-          <div class="service-detail-block">
-            <h3>Timeline</h3>
-            <p>Posting within 2 weeks. Setup in month one, full rhythm by month two.</p>
-          </div>
-
-          <div class="service-detail-block">
-            <h3>The outcome</h3>
-            <p>A consistent, on-brand presence that keeps you top-of-mind. Real engagement — not vanity follower counts.</p>
-          </div>
-
-        </div>
-
-        <div class="service-cta-row">
-          <a href="/pricing#social-media" class="btn btn-primary btn-lg">See Social Media Pricing &rarr;</a>
         </div>
       </div>
     </section>
@@ -350,12 +346,16 @@
         <div class="service-section-header">
           <span class="section-label">Website Design &amp; Development</span>
           <h2 id="web-heading">Your Website Should Work as Hard as You Do.</h2>
-          <p class="services-intro">Mobile-first, fast, and built to convert. No page builders, no templates.</p>
         </div>
 
-        <div class="service-detail-grid">
-
-          <div class="service-detail-block">
+        <div class="service-block">
+          <div class="service-block-narrative">
+            <p>Mobile-first websites built to convert visitors into leads. For Lancaster County businesses with no site, an outdated one, or a site that looks fine but doesn't actually generate calls.</p>
+            <p>Sites that earn trust in three seconds — and that you own outright, every line of code.</p>
+            <p class="service-meta"><strong>Timeline</strong>2&ndash;3 weeks (Launch) · 3&ndash;5 weeks (Growth) · 5&ndash;8 weeks (Full-Service)</p>
+            <a href="/pricing#websites" class="btn btn-primary">See Website Pricing &rarr;</a>
+          </div>
+          <div class="service-block-list">
             <h3>What's included</h3>
             <ul>
               <li>Mobile-first, hand-coded design</li>
@@ -365,26 +365,6 @@
               <li>Higher tiers add blog/CMS, lead capture, conversion tracking, e-commerce, accessibility</li>
             </ul>
           </div>
-
-          <div class="service-detail-block">
-            <h3>Who it's for</h3>
-            <p>Lancaster County businesses with no site, an outdated one, or a site that doesn't actually convert.</p>
-          </div>
-
-          <div class="service-detail-block">
-            <h3>Timeline</h3>
-            <p>2&ndash;3 weeks (Launch) · 3&ndash;5 weeks (Growth) · 5&ndash;8 weeks (Full-Service). We hit our deadlines.</p>
-          </div>
-
-          <div class="service-detail-block">
-            <h3>The outcome</h3>
-            <p>A site that earns trust in three seconds and turns visitors into leads. You own every line of code.</p>
-          </div>
-
-        </div>
-
-        <div class="service-cta-row">
-          <a href="/pricing#websites" class="btn btn-primary btn-lg">See Website Pricing &rarr;</a>
         </div>
       </div>
     </section>
