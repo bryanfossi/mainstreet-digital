@@ -95,6 +95,83 @@
     });
   }
 
+  /* ── Lead Magnet Form (Free Digital Health Check) ────────── */
+  function initLeadMagnetForm() {
+    const form = document.getElementById('leadmag-form');
+    if (!form) return;
+
+    const nameInput = form.querySelector('#leadmag-name');
+    const emailInput = form.querySelector('#leadmag-email');
+    const submitBtn = form.querySelector('.leadmag-submit');
+    const errorEl = form.querySelector('.leadmag-error');
+
+    function setError(msg) {
+      if (!errorEl) return;
+      if (msg) {
+        errorEl.textContent = msg;
+        errorEl.classList.add('visible');
+      } else {
+        errorEl.textContent = '';
+        errorEl.classList.remove('visible');
+      }
+    }
+
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    [nameInput, emailInput].forEach(el => {
+      if (!el) return;
+      el.addEventListener('input', () => {
+        el.classList.remove('error');
+        setError('');
+      });
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      setError('');
+
+      const name = (nameInput && nameInput.value || '').trim();
+      const email = (emailInput && emailInput.value || '').trim();
+
+      if (!email) {
+        emailInput.classList.add('error');
+        setError('Please enter your email address.');
+        emailInput.focus();
+        return;
+      }
+      if (!validateEmail(email)) {
+        emailInput.classList.add('error');
+        setError('Please enter a valid email address.');
+        emailInput.focus();
+        return;
+      }
+
+      const originalLabel = submitBtn.textContent;
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+
+      fetch('/api/lead-magnet', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email }),
+      })
+        .then(async (res) => {
+          if (!res.ok) {
+            const data = await res.json().catch(() => ({}));
+            throw new Error(data.error || 'Request failed.');
+          }
+          window.location.href = '/health-check';
+        })
+        .catch((err) => {
+          submitBtn.textContent = originalLabel;
+          submitBtn.disabled = false;
+          setError(err.message || 'Something went wrong. Please try again.');
+        });
+    });
+  }
+
   /* ── Scroll-Reveal (lightweight, intersection-based) ─────── */
   function initScrollReveal() {
     if (!('IntersectionObserver' in window)) return;
@@ -210,6 +287,7 @@
     initStickyHeader();
     initMobileMenu();
     setActiveNav();
+    initLeadMagnetForm();
     initScrollReveal();
     initSmoothScroll();
     initHeroVideoPlaylist();

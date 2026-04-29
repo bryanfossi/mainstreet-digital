@@ -324,6 +324,63 @@
       </div>
     </section>
 
+    <!-- ════════════════════════════════════════════════════════════════════
+         "Most Local Businesses Have Two Options" comparison block — DRAFT
+         Held until copy is approved by Bryan. To publish: remove the surrounding
+         <!-- and --\> comment markers below. CSS lives in styles.css under
+         "Comparison Section" and is inert until this markup is uncommented.
+    ════════════════════════════════════════════════════════════════════════ -->
+    <!--
+    <section class="compare-section" aria-labelledby="compare-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Why Main Street</span>
+          <h2 id="compare-heading">Most Local Businesses Have Two Options.<br>We're a Third.</h2>
+          <p>How working with us compares to the alternatives most local business owners have tried.</p>
+        </div>
+
+        <div class="compare-grid">
+
+          <div class="compare-card">
+            <p class="compare-card-tag">Option 1</p>
+            <h3>Big Agency</h3>
+            <ul class="compare-list">
+              <li>Annual or multi-year retainers</li>
+              <li>Account managed by a junior team</li>
+              <li>Assets often live in their systems</li>
+              <li>National accounts, generic playbook</li>
+            </ul>
+          </div>
+
+          <div class="compare-card">
+            <p class="compare-card-tag">Option 2</p>
+            <h3>Cheap Freelancer</h3>
+            <ul class="compare-list">
+              <li>Project-by-project work</li>
+              <li>Solo bandwidth — depends on availability</li>
+              <li>Asset ownership varies</li>
+              <li>Generalist skill set</li>
+            </ul>
+          </div>
+
+          <div class="compare-card compare-card-featured">
+            <div class="compare-card-badge">The Third Option</div>
+            <p class="compare-card-tag">Main Street Digital</p>
+            <h3>Hands-On &amp; Honest</h3>
+            <ul class="compare-list compare-list-checks">
+              <li>Month-to-month, no long contracts</li>
+              <li>Founders personally manage your account</li>
+              <li>You own your domain, accounts, and content</li>
+              <li>Local to Lancaster, Dauphin, Cumberland &amp; Berks Counties</li>
+            </ul>
+            <a href="/contact" class="btn btn-primary btn-full" style="margin-top: 1.5rem;">Book a Free Consult</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    -->
+
     <!-- ── TRUST SIGNALS ──────────────────────────────────── -->
     <section class="trust-signals" aria-labelledby="trust-heading">
       <div class="container">
@@ -379,6 +436,49 @@
         <h2 id="cta-heading">Ready to get found?</h2>
         <p>Schedule a free 30-minute consultation. No pressure, no pitch — just an honest conversation about where your business stands and where it could go.</p>
         <a href="/contact" class="btn btn-white btn-lg">Book Your Free Consult</a>
+      </div>
+    </section>
+
+    <!-- ── LEAD MAGNET / DIGITAL HEALTH CHECK ──────────────── -->
+    <section class="lead-magnet-section" aria-labelledby="leadmag-heading">
+      <div class="container">
+        <div class="leadmag-card">
+          <div class="leadmag-content">
+            <span class="section-label">Not Ready to Talk Yet?</span>
+            <h2 id="leadmag-heading">Free Digital Health Check</h2>
+            <p>A 10-question self-audit to see how your local business stacks up online — website, Google, social, and more. Delivered straight to your inbox. No spam, ever.</p>
+          </div>
+
+          <form id="leadmag-form" class="leadmag-form" novalidate>
+            <div class="leadmag-fields">
+              <label class="visually-hidden" for="leadmag-name">First name (optional)</label>
+              <input
+                type="text"
+                id="leadmag-name"
+                name="name"
+                placeholder="First name (optional)"
+                autocomplete="given-name"
+                maxlength="100"
+              />
+              <label class="visually-hidden" for="leadmag-email">Email address</label>
+              <input
+                type="email"
+                id="leadmag-email"
+                name="email"
+                placeholder="you@yourbusiness.com"
+                autocomplete="email"
+                required
+                aria-required="true"
+                maxlength="200"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg leadmag-submit">Send Me the Health Check</button>
+            <p class="leadmag-note">
+              <span class="leadmag-coming-soon">Currently finalizing the new edition — we'll email it the moment it drops (typically within 2 weeks).</span>
+            </p>
+            <p class="leadmag-error" role="alert" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
 

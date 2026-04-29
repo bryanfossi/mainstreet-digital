@@ -880,6 +880,139 @@ section {
   .trust-check { margin-top: 0; }
 }
 
+/* ─── Comparison Section (Why Us vs. Alternatives) ──────────── */
+/* Active styles supporting the DRAFT comparison block in index.html.
+   Inert (no matching DOM) until the HTML is uncommented and approved. */
+.compare-section {
+  background: var(--light);
+}
+
+.compare-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.compare-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.compare-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.compare-card-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.compare-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-dark);
+}
+
+.compare-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex-grow: 1;
+}
+
+.compare-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.compare-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.5;
+  flex-shrink: 0;
+  margin-top: 0.55rem;
+}
+
+/* Featured (MSD) card — gold accent, gold checkmarks, elevated */
+.compare-card-featured {
+  border: 2px solid var(--gold);
+  background: var(--white);
+  box-shadow: 0 8px 32px rgba(198, 169, 107, 0.18);
+}
+
+.compare-card-featured .compare-card-tag {
+  color: var(--gold);
+}
+
+.compare-card-featured h3 {
+  color: var(--navy);
+}
+
+.compare-card-featured .compare-list-checks li {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.compare-card-featured .compare-list-checks li::before {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23FFFFFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8l3 3 7-7'/%3E%3C/svg%3E");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  margin-top: 1px;
+}
+
+.compare-card-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .compare-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .compare-card-featured {
+    transform: scale(1.03);
+  }
+  .compare-card-featured:hover {
+    transform: scale(1.03) translateY(-3px);
+  }
+}
+
 /* ─── CTA Banner ─────────────────────────────────────────────── */
 .cta-banner {
   background: var(--blue);
@@ -1655,6 +1788,142 @@ section {
   .book-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* ─── Lead Magnet (Free Digital Health Check) ───────────────── */
+.lead-magnet-section {
+  background: var(--navy);
+  padding: var(--section-py) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.lead-magnet-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent 0px,
+    transparent 38px,
+    rgba(43, 127, 255, 0.04) 38px,
+    rgba(43, 127, 255, 0.04) 39px
+  );
+  pointer-events: none;
+}
+
+.leadmag-card {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin-inline: auto;
+  background: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 2.75rem 2rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.leadmag-content .section-label {
+  color: var(--gold);
+}
+
+.leadmag-content h2 {
+  color: var(--text-dark);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+.leadmag-content p {
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.leadmag-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.85rem;
+}
+
+.leadmag-fields {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.leadmag-form input[type="text"],
+.leadmag-form input[type="email"] {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-dark);
+  background: var(--white);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.leadmag-form input::placeholder {
+  color: var(--text-muted);
+  opacity: 0.85;
+}
+
+.leadmag-form input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(43, 127, 255, 0.12);
+}
+
+.leadmag-form input.error {
+  border-color: #EF4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.leadmag-submit {
+  width: 100%;
+}
+
+.leadmag-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0.25rem 0 0;
+}
+
+.leadmag-coming-soon {
+  display: inline-block;
+  background: rgba(198, 169, 107, 0.12);
+  color: var(--text-dark);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.leadmag-error {
+  display: none;
+  color: #EF4444;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.25rem 0 0;
+}
+
+.leadmag-error.visible {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .leadmag-fields {
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .leadmag-card {
+    padding: 3rem 2.5rem;
   }
 }
 
