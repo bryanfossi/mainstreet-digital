@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Main Street Digital Services</title>
+  <meta name="description" content="Straightforward pricing for social media marketing, website design, and add-on services. Month-to-month, no long contracts. Built for local Pennsylvania businesses." />
+  <link rel="canonical" href="https://mainstreetdigitalservices.com/pricing" />
+
+  <!-- Fonts (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Main Street Digital Services" />
+  <meta property="og:title" content="Pricing — Main Street Digital Services" />
+  <meta property="og:description" content="Straightforward pricing for social media marketing, website design, and add-on services. Month-to-month, no long contracts." />
+  <meta property="og:image" content="https://mainstreetdigitalservices.com/logos/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Main Street Digital Services — We Show Up. You Stand Out." />
+  <meta property="og:url" content="https://mainstreetdigitalservices.com/pricing" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pricing — Main Street Digital Services" />
+  <meta name="twitter:description" content="Straightforward pricing for social media, websites, and add-ons. Month-to-month, no long contracts." />
+  <meta name="twitter:image" content="https://mainstreetdigitalservices.com/logos/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+  <meta name="apple-mobile-web-app-title" content="Main Street Digital" />
+  <meta name="theme-color" content="#0A1628" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Pricing-page-only styles ─────────────────────────── */
+    .pricing-section.alt { background: var(--light); }
+    .pricing-section { background: var(--white); padding: 4.5rem 0; }
+    .pricing-section-header { text-align: center; margin-bottom: 3rem; }
+    .pricing-section-header h2 { margin: 0.5rem 0 0.75rem; }
+    .pricing-section-header p { color: var(--text-muted); max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+    /* "See full details" link below each tier section */
+    .pricing-detail-link {
+      text-align: center;
+      margin-top: 2.25rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .pricing-detail-link a { color: var(--blue); font-weight: 600; }
+
+    /* What's Not Included — transparency callout */
+    .not-included {
+      background: var(--surface);
+      padding: 4.5rem 0;
+    }
+    .not-included-card {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 2.25rem;
+    }
+    .not-included-card h2 { margin: 0 0 0.4rem; font-size: 1.4rem; }
+    .not-included-card > p { color: var(--text-muted); line-height: 1.65; margin-bottom: 1.25rem; }
+    .not-included-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.85rem; }
+    .not-included-list li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+    .not-included-list strong { color: var(--text-dark); display: block; margin-bottom: 0.1rem; }
+    .not-included-list span { color: var(--text-muted); font-size: 0.9rem; }
+    .not-included-bullet {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(198, 169, 107, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .not-included-bullet svg { width: 12px; height: 12px; color: var(--gold); }
+  </style>
+
+  <!-- Structured Data: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://mainstreetdigitalservices.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://mainstreetdigitalservices.com/pricing" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SHARED NAVIGATION
+  ══════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="/" class="logo" aria-label="Main Street Digital Services — Home">
+        <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services" width="1536" height="1024" fetchpriority="high">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Work With Us</a></li>
+      </ul>
+
+      <a href="/contact" class="btn btn-primary nav-cta">Book a Free Consult</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <ul class="mobile-nav-links" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Work With Us</a></li>
+    </ul>
+    <a href="/contact" class="btn btn-primary btn-full">Book a Free Consult</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── PAGE HERO ─────────────────────────────────────── -->
+    <section class="page-hero" aria-labelledby="pricing-heading">
+      <div class="page-hero-content">
+        <h1 id="pricing-heading">Straightforward Pricing.<br>No Surprises.</h1>
+        <p>Every package, every add-on, every dollar — laid out so you can compare. Month-to-month, no long contracts, you own everything we build.</p>
+      </div>
+    </section>
+
+    <!-- ── SOCIAL MEDIA TIERS ─────────────────────────────── -->
+    <section class="pricing-section" aria-labelledby="pricing-social-heading" id="social-media">
+      <div class="container">
+        <div class="pricing-section-header">
+          <span class="section-label">Social Media Marketing</span>
+          <h2 id="pricing-social-heading">Three ways to show up consistently.</h2>
+          <p>Pick the tier that matches the rhythm your business needs. Every plan is month-to-month — stay because it's working, not because you're stuck.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <div class="pricing-card">
+            <p class="pricing-tier">Tier 1</p>
+            <h3>Social Starter</h3>
+            <div class="pricing-amount">$497<span>/mo</span></div>
+            <p class="pricing-desc">Show up consistently, build a real foundation.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Highlights</p>
+            <ul class="pricing-features">
+              <li>2 platforms managed</li>
+              <li>8 custom posts per month</li>
+              <li>Content calendar</li>
+              <li>Monthly performance report</li>
+            </ul>
+            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <p class="pricing-tier">Tier 2</p>
+            <h3>Social Growth</h3>
+            <div class="pricing-amount">$997<span>/mo</span></div>
+            <p class="pricing-desc">Scale up — more content, paid reach, real visibility.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Everything in Starter, plus</p>
+            <ul class="pricing-features">
+              <li>3 platforms managed</li>
+              <li>16 custom posts per month</li>
+              <li>2 video reels per month</li>
+              <li>Paid ad management (ad spend separate)</li>
+              <li>Analytics dashboard access</li>
+            </ul>
+            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          </div>
+
+          <div class="pricing-card">
+            <p class="pricing-tier">Tier 3</p>
+            <h3>Social Pro</h3>
+            <div class="pricing-amount">$1,997<span>/mo</span></div>
+            <p class="pricing-desc">A full social department without the overhead.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Everything in Growth, plus</p>
+            <ul class="pricing-features">
+              <li>Up to 5 platforms managed</li>
+              <li>24 custom posts per month</li>
+              <li>4 video reels per month</li>
+              <li>Weekly check-ins with account manager</li>
+              <li>Bi-monthly strategy review</li>
+            </ul>
+            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          </div>
+
+        </div>
+
+        <p class="pricing-detail-link">
+          Want the full feature list per tier? <a href="/services#social-media">See social media details &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── WEBSITE TIERS ──────────────────────────────────── -->
+    <section class="pricing-section alt" aria-labelledby="pricing-web-heading" id="websites">
+      <div class="container">
+        <div class="pricing-section-header">
+          <span class="section-label">Website Design &amp; Development</span>
+          <h2 id="pricing-web-heading">One-time builds. Built to last.</h2>
+          <p>Mobile-first, fast, and structured to convert. Every site you own outright — domain, code, content, all of it.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <div class="pricing-card">
+            <p class="pricing-tier">Tier 1</p>
+            <h3>Launch Site</h3>
+            <div class="pricing-amount">$1,500</div>
+            <p class="pricing-desc">A polished site that makes the right first impression.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Highlights</p>
+            <ul class="pricing-features">
+              <li>Up to 5 pages</li>
+              <li>Mobile-responsive design</li>
+              <li>Contact form &amp; Google Business integration</li>
+              <li>Basic on-page SEO</li>
+              <li>Delivered in 2&ndash;3 weeks</li>
+            </ul>
+            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="featured-badge">Most Popular</div>
+            <p class="pricing-tier">Tier 2</p>
+            <h3>Growth Site</h3>
+            <div class="pricing-amount">$3,500</div>
+            <p class="pricing-desc">Strategic site with the tools to track and capture leads.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Everything in Launch, plus</p>
+            <ul class="pricing-features">
+              <li>Up to 10 pages</li>
+              <li>Blog / CMS integration</li>
+              <li>Lead capture forms &amp; conversion tracking</li>
+              <li>SEO package (5 target keywords)</li>
+              <li>Delivered in 3&ndash;5 weeks</li>
+            </ul>
+            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          </div>
+
+          <div class="pricing-card">
+            <p class="pricing-tier">Tier 3</p>
+            <h3>Full-Service Site</h3>
+            <div class="pricing-amount">$6,500<span>+</span></div>
+            <p class="pricing-desc">A custom-built digital flagship with a dedicated PM.</p>
+            <div class="pricing-divider"></div>
+            <p class="pricing-includes">Everything in Growth, plus</p>
+            <ul class="pricing-features">
+              <li>Fully custom design, unlimited pages</li>
+              <li>E-commerce or booking integration</li>
+              <li>WCAG 2.1 AA accessibility</li>
+              <li>Dedicated project manager</li>
+              <li>30-day post-launch support</li>
+            </ul>
+            <a href="/contact" class="btn btn-primary btn-full">Book a Consult to Start</a>
+          </div>
+
+        </div>
+
+        <p class="pricing-detail-link">
+          Want the full feature list per tier? <a href="/services#websites">See website details &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ── ADD-ONS ─────────────────────────────────────────── -->
+    <section class="addons-section" aria-labelledby="pricing-addons-heading" id="add-ons">
+      <div class="container">
+        <div class="pricing-section-header">
+          <span class="section-label">Add-Ons</span>
+          <h2 id="pricing-addons-heading">Mix and match what your business needs.</h2>
+          <p>Add any of these to a core package — or start with one on its own if it's all you need.</p>
+        </div>
+
+        <div class="addons-grid">
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Website Maintenance</div>
+              <div class="addon-type">Monthly retainer</div>
+            </div>
+            <div class="addon-price">$149/mo</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Google Ads Management</div>
+              <div class="addon-type">+ ad spend</div>
+            </div>
+            <div class="addon-price">$350/mo</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Email Newsletter Management</div>
+              <div class="addon-type">Monthly retainer</div>
+            </div>
+            <div class="addon-price">$250/mo</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Reputation Management</div>
+              <div class="addon-type">Monthly retainer</div>
+            </div>
+            <div class="addon-price">$199/mo</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Brand Photography Package</div>
+              <div class="addon-type">One-time</div>
+            </div>
+            <div class="addon-price">$795</div>
+          </div>
+
+          <div class="addon-tile">
+            <div>
+              <div class="addon-name">Logo &amp; Brand Identity</div>
+              <div class="addon-type">One-time, custom</div>
+            </div>
+            <div class="addon-price">from $595</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHAT'S NOT INCLUDED ─────────────────────────────── -->
+    <section class="not-included" aria-labelledby="not-included-heading">
+      <div class="container">
+        <div class="not-included-card">
+          <span class="section-label">Full Transparency</span>
+          <h2 id="not-included-heading">A few things our prices don't cover.</h2>
+          <p>Because we'd rather be upfront about it now than awkward about it later.</p>
+          <ul class="not-included-list">
+            <li>
+              <span class="not-included-bullet" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h6"/></svg>
+              </span>
+              <div>
+                <strong>Ad spend</strong>
+                <span>Paid ads on Google, Meta, etc. are billed directly by the platform to you. We manage the campaigns; you keep ownership of the ad accounts.</span>
+              </div>
+            </li>
+            <li>
+              <span class="not-included-bullet" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h6"/></svg>
+              </span>
+              <div>
+                <strong>Domain &amp; hosting</strong>
+                <span>We help you set them up in your name (typically $15&ndash;$30/yr for the domain, $10&ndash;$25/mo for hosting). Both stay registered to you, not us.</span>
+              </div>
+            </li>
+            <li>
+              <span class="not-included-bullet" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h6"/></svg>
+              </span>
+              <div>
+                <strong>Third-party tools</strong>
+                <span>Email platforms, scheduling tools, CRMs, stock photography — if your project needs them, we'll recommend the right fit and you'll subscribe directly.</span>
+              </div>
+            </li>
+            <li>
+              <span class="not-included-bullet" aria-hidden="true">
+                <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h6"/></svg>
+              </span>
+              <div>
+                <strong>Surprise fees</strong>
+                <span>There aren't any. Anything outside the scope of your package gets a quote up front before any work happens.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONFIDENCE / TRUST ──────────────────────────────── -->
+    <section class="trust-signals" aria-labelledby="pricing-trust-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">How We Work</span>
+          <h2 id="pricing-trust-heading">Pricing you can plan around.</h2>
+        </div>
+        <div class="trust-grid">
+
+          <div class="trust-item">
+            <div class="trust-check" aria-hidden="true">
+              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 7.5l3.5 3.5 6-7"/>
+              </svg>
+            </div>
+            <div>
+              <h3>No long contracts</h3>
+              <p>Every monthly package is month-to-month. Cancel any time with 30 days' notice. We'd rather earn next month than lock you in.</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-check" aria-hidden="true">
+              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 7.5l3.5 3.5 6-7"/>
+              </svg>
+            </div>
+            <div>
+              <h3>You own everything</h3>
+              <p>Your domain, your code, your accounts, your content. Always. If you ever leave, you take everything with you — no hostage situations.</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-check" aria-hidden="true">
+              <svg viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 7.5l3.5 3.5 6-7"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Free consult before you spend a dollar</h3>
+              <p>30 minutes with Bryan or Jared, no pitch deck. We'll tell you which package fits — or whether you don't need us yet.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ TEASER ─────────────────────────────────────── -->
+    <section class="faq-section" aria-labelledby="pricing-faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Pricing FAQ</span>
+          <h2 id="pricing-faq-heading">Quick answers about what you'll pay.</h2>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item" name="pricing-faq">
+            <summary>Do I have to commit for a year?</summary>
+            <div class="faq-answer">
+              <p>No. Every monthly package is month-to-month with 30 days' notice to cancel. You stay because the work is paying off, not because of a contract clause.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="pricing-faq">
+            <summary>What's the cheapest way to get started?</summary>
+            <div class="faq-answer">
+              <p>The Launch Site at $1,500 is the lowest-friction entry point if you don't have a website yet. If you already have one, the Social Starter at $497/mo gets you posting consistently. We'll talk through which makes sense on the consult.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="pricing-faq">
+            <summary>Are ad spend and software included in your prices?</summary>
+            <div class="faq-answer">
+              <p>No — and that's intentional. Ad spend gets billed by Google or Meta directly to your account, and any third-party tools (email, CRM, scheduling, etc.) you subscribe to in your name. That way you own the accounts and can take them anywhere.</p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="pricing-faq">
+            <summary>What happens if my needs change mid-package?</summary>
+            <div class="faq-answer">
+              <p>We adjust. Move up a tier, move down a tier, swap an add-on in or out — we'll quote the change up front and roll it in at your next billing cycle. No retroactive surprises.</p>
+            </div>
+          </details>
+
+        </div>
+
+        <p class="faq-closing">
+          More questions? <a href="/services#faq-heading">Full FAQ on the services page</a> or <a href="/contact">book a free consult</a> and ask us directly.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CTA BANNER ─────────────────────────────────────── -->
+    <section class="cta-banner" aria-labelledby="pricing-cta-heading">
+      <div class="container">
+        <h2 id="pricing-cta-heading">Not sure which package is right?</h2>
+        <p>Free 30-minute consult with Bryan or Jared. We'll look at your business, your goals, and your budget — then tell you exactly what makes sense.</p>
+        <a href="/contact" class="btn btn-white btn-lg">Book Your Free Consult</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SHARED FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <img src="logos/MSDS Transparent 2.png" alt="Main Street Digital Services" width="1536" height="1024" loading="lazy">
+        </a>
+        <p class="footer-tagline">We Show Up. You Stand Out.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/about">About</a>
+        <a href="/contact">Work With Us</a>
+      </nav>
+
+      <div class="footer-contact">
+        <p><a href="mailto:bryan@mainstreetdigitalservices.com">bryan@mainstreetdigitalservices.com</a></p>
+        <p><a href="tel:+17178752665">(717) 875-2665</a></p>
+        <p>Lancaster, Dauphin, Cumberland &amp; Berks Counties, PA</p>
+      </div>
+    </div>
+    <div class="footer-bottom-inner">
+      <p>© 2026 Main Street Digital Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

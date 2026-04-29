@@ -26,6 +26,7 @@
   <style>
     .thanks-hero {
       min-height: calc(100vh - var(--header-h));
+      min-height: calc(100dvh - var(--header-h));
       background: var(--navy);
       padding: 6rem 1.25rem 5rem;
       text-align: center;
@@ -44,8 +45,8 @@
         -55deg,
         transparent 0px,
         transparent 38px,
-        rgba(43, 127, 255, 0.05) 38px,
-        rgba(43, 127, 255, 0.05) 39px
+        rgba(27, 79, 138, 0.05) 38px,
+        rgba(27, 79, 138, 0.05) 39px
       );
       pointer-events: none;
     }
@@ -139,13 +140,13 @@
     }
 
     .thanks-secondary-links a:hover {
-      color: var(--blue);
+      color: var(--gold);
     }
   </style>
 </head>
 <body>
 
-  <a href="/#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header" id="site-header">
     <nav class="nav-inner" aria-label="Main navigation">
@@ -156,6 +157,7 @@
       <ul class="nav-links" role="list">
         <li><a href="/">Home</a></li>
         <li><a href="/services">Services</a></li>
+        <li><a href="/pricing">Pricing</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Work With Us</a></li>
       </ul>
@@ -174,6 +176,7 @@
     <ul class="mobile-nav-links" role="list">
       <li><a href="/">Home</a></li>
       <li><a href="/services">Services</a></li>
+      <li><a href="/pricing">Pricing</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/contact">Work With Us</a></li>
     </ul>

@@ -1,6 +1,6 @@
 /* ============================================================
    MAIN STREET DIGITAL — scripts.js
-   Shared JavaScript across all 4 pages.
+   Shared JavaScript across all 7 pages.
    Pure vanilla JS — no dependencies.
    ============================================================ */
 
@@ -91,8 +91,55 @@
       const linkPath = normalize(link.getAttribute('href'));
       if (linkPath === currentPath) {
         link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
       }
     });
+  }
+
+  /* ── Stats Counter (animate on scroll into view) ─────────── */
+  function initStatsCounter() {
+    const counters = document.querySelectorAll('[data-counter-target]');
+    if (counters.length === 0) return;
+
+    const reduceMotion = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const supportsObserver = 'IntersectionObserver' in window;
+
+    if (reduceMotion || !supportsObserver) {
+      counters.forEach(el => {
+        el.textContent = el.getAttribute('data-counter-target');
+      });
+      return;
+    }
+
+    function animateCounter(el) {
+      const target = parseFloat(el.getAttribute('data-counter-target')) || 0;
+      const isInteger = Number.isInteger(target);
+      const duration = 1400;
+      const startTime = performance.now();
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        const current = target * eased;
+        el.textContent = isInteger ? Math.round(current) : current.toFixed(1);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = isInteger ? target : target.toFixed(1);
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.4, rootMargin: '0px 0px -10% 0px' });
+
+    counters.forEach(el => observer.observe(el));
   }
 
   /* ── Lead Magnet Form (Free Digital Health Check) ────────── */
@@ -287,6 +334,7 @@
     initStickyHeader();
     initMobileMenu();
     setActiveNav();
+    initStatsCounter();
     initLeadMagnetForm();
     initScrollReveal();
     initSmoothScroll();

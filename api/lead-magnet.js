@@ -192,7 +192,7 @@ function buildWaitlistHtml(name) {
     <p style="margin:0 0 1rem;">Thanks for asking for the <strong>Local Business Digital Health Check</strong>. We're putting the finishing touches on the new edition.</p>
     <p style="margin:0 0 1.5rem;">The moment it drops we'll email it your way — typically within the next two weeks.</p>
     <p style="margin:0 0 1rem;">If you'd rather just talk through your business with a real person now, you can book a free 30-minute consultation any time:</p>
-    <p style="margin:0 0 1.5rem;"><a href="https://mainstreetdigitalservices.com/contact" style="display:inline-block;background:#2B7FFF;color:#ffffff;text-decoration:none;font-weight:600;padding:12px 24px;border-radius:999px;">Book a Free Consult</a></p>
+    <p style="margin:0 0 1.5rem;"><a href="https://mainstreetdigitalservices.com/contact" style="display:inline-block;background:#1B4F8A;color:#ffffff;text-decoration:none;font-weight:600;padding:12px 24px;border-radius:999px;">Book a Free Consult</a></p>
     <p style="margin:0;color:#6B7280;font-size:13px;">— Bryan &amp; Jared</p>
   `;
   return emailLayout("You're on the list", body);
@@ -204,7 +204,7 @@ function buildPdfHtml(name) {
     <p style="margin:0 0 1rem;">Your <strong>Local Business Digital Health Check</strong> is attached to this email — a 10-question self-audit covering the essentials: website performance, Google Business Profile, social media consistency, and more.</p>
     <p style="margin:0 0 1.5rem;">Set aside 15 minutes, run through the checklist, and you'll know exactly where to focus.</p>
     <p style="margin:0 0 1rem;">When you're ready to talk through your results:</p>
-    <p style="margin:0 0 1.5rem;"><a href="https://mainstreetdigitalservices.com/contact" style="display:inline-block;background:#2B7FFF;color:#ffffff;text-decoration:none;font-weight:600;padding:12px 24px;border-radius:999px;">Book a Free Consult</a></p>
+    <p style="margin:0 0 1.5rem;"><a href="https://mainstreetdigitalservices.com/contact" style="display:inline-block;background:#1B4F8A;color:#ffffff;text-decoration:none;font-weight:600;padding:12px 24px;border-radius:999px;">Book a Free Consult</a></p>
     <p style="margin:0;color:#6B7280;font-size:13px;">— Bryan &amp; Jared</p>
   `;
   return emailLayout('Your Digital Health Check is here', body);

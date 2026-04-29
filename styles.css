@@ -1,6 +1,6 @@
 /* ============================================================
    MAIN STREET DIGITAL — styles.css
-   Shared styles across all 4 pages.
+   Shared styles across all 7 pages.
    Mobile-first. No external dependencies except Google Fonts.
    ============================================================ */
 
@@ -9,20 +9,31 @@
 
 /* ─── CSS Custom Properties ─────────────────────────────────── */
 :root {
+  /* Brand */
   --navy:        #0A1628;
-  --blue:        #2B7FFF;
+  --blue:        #1B4F8A;   /* warmer trust blue (was #2B7FFF) */
+  --blue-deep:   #143E6E;   /* hover/pressed */
+  --blue-rgb:    27, 79, 138;
   --gold:        #C6A96B;
-  --light:       #F4F6FA;
-  --white:       #FFFFFF;
-  --text-dark:   #1A1A2E;
-  --text-light:  #FFFFFF;
-  --text-muted:  #6B7280;
-  --border:      #E5E7EB;
+  --gold-rgb:    198, 169, 107;
 
-  --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-md:   0 4px 20px rgba(0, 0, 0, 0.10);
-  --shadow-lg:   0 8px 40px rgba(0, 0, 0, 0.14);
-  --shadow-blue: 0 8px 40px rgba(43, 127, 255, 0.25);
+  /* Surfaces — slightly warmer than before */
+  --background:  #FAFAF8;   /* warm off-white page background */
+  --surface:     #F2F0EC;   /* warm gray for cards/sections */
+  --light:       #F2F0EC;   /* legacy alias kept for existing usage */
+  --white:       #FFFFFF;
+
+  /* Text */
+  --text-dark:   #1A1A1A;
+  --text-light:  #FFFFFF;
+  --text-muted:  #6B6B6B;
+  --border:      #E5E2DC;   /* warm border */
+
+  /* Shadows — warm-tinted instead of cold gray */
+  --shadow-sm:   0 2px 8px rgba(38, 28, 18, 0.06);
+  --shadow-md:   0 4px 20px rgba(38, 28, 18, 0.10);
+  --shadow-lg:   0 8px 40px rgba(38, 28, 18, 0.14);
+  --shadow-blue: 0 8px 40px rgba(var(--blue-rgb), 0.30);
 
   --radius-sm:   8px;
   --radius-md:   12px;
@@ -149,11 +160,11 @@ section {
 .btn-primary {
   background: var(--blue);
   color: var(--white);
-  box-shadow: 0 4px 14px rgba(43, 127, 255, 0.3);
+  box-shadow: 0 4px 14px rgba(27, 79, 138, 0.3);
 }
 .btn-primary:hover {
-  background: #1a6ef0;
-  box-shadow: 0 6px 20px rgba(43, 127, 255, 0.45);
+  background: var(--blue-deep);
+  box-shadow: 0 6px 20px rgba(var(--blue-rgb), 0.45);
   transform: translateY(-1px);
 }
 
@@ -369,11 +380,16 @@ section {
   color: var(--white);
 }
 
-/* Desktop nav reveal */
-@media (min-width: 900px) {
+/* Desktop nav reveal — 5 nav items + CTA need a bit more breathing room */
+@media (min-width: 1024px) {
   .nav-links { display: flex; }
   .nav-cta { display: inline-flex; }
   .hamburger { display: none; }
+}
+
+/* Trim the gap between nav items at the lower end of desktop so things fit */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .nav-links { gap: 1.5rem; }
 }
 
 /* ─── Page offset for fixed header ──────────────────────────── */
@@ -434,7 +450,7 @@ section {
   color: rgba(255,255,255,0.65);
   transition: color var(--transition);
 }
-.footer-contact a:hover { color: var(--blue); }
+.footer-contact a:hover { color: var(--gold); }
 
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -475,6 +491,7 @@ section {
 /* ─── Hero: Home ─────────────────────────────────────────────── */
 .hero-home {
   min-height: 100vh;
+  min-height: 100dvh;
   background: var(--navy);
   display: flex;
   align-items: center;
@@ -517,8 +534,8 @@ section {
       -55deg,
       transparent 0px,
       transparent 38px,
-      rgba(43, 127, 255, 0.06) 38px,
-      rgba(43, 127, 255, 0.06) 39px
+      rgba(27, 79, 138, 0.06) 38px,
+      rgba(27, 79, 138, 0.06) 39px
     );
   animation: slideLines 22s linear infinite;
   will-change: transform;
@@ -532,7 +549,7 @@ section {
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(43, 127, 255, 0.10) 0%, transparent 68%);
+  background: radial-gradient(circle, rgba(27, 79, 138, 0.10) 0%, transparent 68%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -651,6 +668,68 @@ section {
   flex-shrink: 0;
 }
 
+/* ─── Stats Section (sourced industry statistics) ────────────── */
+.stats-section {
+  background: var(--surface);
+  padding: 4.5rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 2.5rem;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.stat-block {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.stat-figure {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.stat-number {
+  font-size: clamp(2.6rem, 6vw, 3.6rem);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-suffix {
+  font-size: clamp(2rem, 4.5vw, 2.6rem);
+  color: var(--gold);
+  margin-left: 0.15rem;
+}
+
+.stat-label {
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.55;
+  max-width: 280px;
+  margin: 0 auto 0.5rem;
+}
+
+.stat-source {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .stat-block + .stat-block {
+    border-left: 1px solid var(--border);
+  }
+}
+
 /* ─── Pain Points Section ────────────────────────────────────── */
 .pain-points {
   background: var(--white);
@@ -688,7 +767,7 @@ section {
 .pain-card-icon {
   width: 48px;
   height: 48px;
-  background: rgba(43, 127, 255, 0.08);
+  background: rgba(27, 79, 138, 0.08);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
@@ -742,8 +821,8 @@ section {
 }
 
 .how-column:hover {
-  border-color: rgba(43, 127, 255, 0.4);
-  background: rgba(43, 127, 255, 0.06);
+  border-color: rgba(27, 79, 138, 0.4);
+  background: rgba(27, 79, 138, 0.06);
 }
 
 .how-number {
@@ -1050,8 +1129,8 @@ section {
     -55deg,
     transparent 0px,
     transparent 38px,
-    rgba(43, 127, 255, 0.035) 38px,
-    rgba(43, 127, 255, 0.035) 39px
+    rgba(27, 79, 138, 0.035) 38px,
+    rgba(27, 79, 138, 0.035) 39px
   );
   pointer-events: none;
 }
@@ -1103,7 +1182,7 @@ section {
 }
 
 .pricing-card.featured:hover {
-  box-shadow: 0 12px 50px rgba(43, 127, 255, 0.35);
+  box-shadow: 0 12px 50px rgba(27, 79, 138, 0.35);
 }
 
 .featured-badge {
@@ -1195,10 +1274,10 @@ section {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: rgba(43, 127, 255, 0.1);
+  background: rgba(27, 79, 138, 0.1);
   flex-shrink: 0;
   margin-top: 2px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%232B7FFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8l3 3 7-7'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%231B4F8A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8l3 3 7-7'/%3E%3C/svg%3E");
   background-size: 12px;
   background-repeat: no-repeat;
   background-position: center;
@@ -1318,7 +1397,7 @@ section {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 2px solid rgba(43, 127, 255, 0.2);
+  border: 2px solid rgba(27, 79, 138, 0.2);
   animation: rotateGeo 20s linear infinite;
 }
 
@@ -1327,7 +1406,7 @@ section {
   inset: 20px;
   border-radius: 50%;
   background: rgba(10, 22, 40, 0.06);
-  border: 1px solid rgba(43, 127, 255, 0.15);
+  border: 1px solid rgba(27, 79, 138, 0.15);
 }
 
 .geo-square {
@@ -1365,17 +1444,12 @@ section {
   height: 60px;
   background: linear-gradient(135deg, var(--navy), var(--blue));
   border-radius: 50%;
-  box-shadow: 0 0 30px rgba(43, 127, 255, 0.3);
+  box-shadow: 0 0 30px rgba(27, 79, 138, 0.3);
 }
 
 @keyframes rotateGeo {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
-}
-
-@keyframes rotateGeoReverse {
-  from { transform: translate(-50%, -50%) rotate(15deg); }
-  to   { transform: translate(-50%, -50%) rotate(375deg); }
 }
 
 @media (min-width: 900px) {
@@ -1580,7 +1654,7 @@ section {
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.25rem;
-  box-shadow: 0 4px 14px rgba(43, 127, 255, 0.3);
+  box-shadow: 0 4px 14px rgba(27, 79, 138, 0.3);
 }
 
 .step-item h3 {
@@ -1609,7 +1683,7 @@ section {
     left: calc(16.66% + 28px);
     right: calc(16.66% + 28px);
     height: 2px;
-    background: linear-gradient(90deg, var(--blue), rgba(43,127,255,0.3), var(--blue));
+    background: linear-gradient(90deg, var(--blue), rgba(var(--blue-rgb), 0.3), var(--blue));
     z-index: 0;
   }
   .step-number { position: relative; z-index: 1; }
@@ -1637,7 +1711,7 @@ section {
 }
 
 .faq-item[open] {
-  border-color: rgba(43, 127, 255, 0.4);
+  border-color: rgba(27, 79, 138, 0.4);
   box-shadow: var(--shadow-sm);
 }
 
@@ -1690,12 +1764,6 @@ section {
 
 .faq-item .faq-answer p + p {
   margin-top: 0.75rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .faq-item summary::after {
-    transition: none;
-  }
 }
 
 .faq-closing {
@@ -1807,8 +1875,8 @@ section {
     -55deg,
     transparent 0px,
     transparent 38px,
-    rgba(43, 127, 255, 0.04) 38px,
-    rgba(43, 127, 255, 0.04) 39px
+    rgba(27, 79, 138, 0.04) 38px,
+    rgba(27, 79, 138, 0.04) 39px
   );
   pointer-events: none;
 }
@@ -1877,7 +1945,7 @@ section {
 
 .leadmag-form input:focus {
   border-color: var(--blue);
-  box-shadow: 0 0 0 3px rgba(43, 127, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(27, 79, 138, 0.12);
 }
 
 .leadmag-form input.error {
@@ -1952,7 +2020,7 @@ section {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: rgba(43, 127, 255, 0.15);
+  background: rgba(27, 79, 138, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1982,7 +2050,7 @@ section {
   line-height: 1.5;
 }
 
-.contact-info-item a:hover { color: var(--blue); }
+.contact-info-item a:hover { color: var(--gold); }
 
 @media (min-width: 640px) {
   .contact-info-grid { grid-template-columns: repeat(3, 1fr); }
