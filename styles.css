@@ -137,7 +137,9 @@ section {
   gap: 0.5rem;
   font-weight: 600;
   font-size: 0.9rem;
-  padding: 0.75rem 1.75rem;
+  line-height: 1.4;
+  padding: 0.85rem 1.75rem;
+  min-height: 44px;
   border-radius: var(--radius-pill);
   transition: all var(--transition);
   white-space: nowrap;
@@ -1561,6 +1563,24 @@ section {
   .faq-item summary::after {
     transition: none;
   }
+}
+
+.faq-closing {
+  text-align: center;
+  margin-top: 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.faq-closing a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.faq-closing a:hover {
+  text-decoration: underline;
 }
 
 /* ─── Contact — Book a Time ──────────────────────────────────── */
