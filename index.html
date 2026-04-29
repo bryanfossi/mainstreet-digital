@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Main Street Digital Services — We Show Up. You Stand Out.</title>
+  <title>Lancaster Web Design & Social Media Marketing | Main Street Digital</title>
   <meta name="description" content="Lancaster, Dauphin, Cumberland & Berks Counties web design and social media marketing for local PA businesses. Free 30-minute consultation." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mainstreetdigitalservices.com/" />
 
   <!-- Fonts (non-blocking) -->
@@ -15,7 +16,7 @@
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Main Street Digital Services" />
-  <meta property="og:title" content="Main Street Digital Services — We Show Up. You Stand Out." />
+  <meta property="og:title" content="Lancaster Web Design & Social Media Marketing | Main Street Digital" />
   <meta property="og:description" content="Websites that convert and social media that gets noticed. Built for local businesses in Lancaster, Dauphin, Cumberland & Berks Counties, PA." />
   <meta property="og:image" content="https://mainstreetdigitalservices.com/logos/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -23,7 +24,7 @@
   <meta property="og:image:alt" content="Main Street Digital Services — We Show Up. You Stand Out." />
   <meta property="og:url" content="https://mainstreetdigitalservices.com/" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Main Street Digital Services — We Show Up. You Stand Out." />
+  <meta name="twitter:title" content="Lancaster Web Design & Social Media Marketing | Main Street Digital" />
   <meta name="twitter:description" content="Websites that convert and social media that gets noticed. Built for local businesses in PA." />
   <meta name="twitter:image" content="https://mainstreetdigitalservices.com/logos/og-image.jpg" />
 
@@ -56,15 +57,40 @@
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
+      "addressLocality": "Lancaster",
       "addressRegion": "PA",
       "addressCountry": "US"
     },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
     "areaServed": [
       { "@type": "AdministrativeArea", "name": "Lancaster County, Pennsylvania" },
       { "@type": "AdministrativeArea", "name": "Dauphin County, Pennsylvania" },
       { "@type": "AdministrativeArea", "name": "Cumberland County, Pennsylvania" },
       { "@type": "AdministrativeArea", "name": "Berks County, Pennsylvania" }
     ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Main Street Digital Services Offerings",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Social Media Marketing" },
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": "497", "priceCurrency": "USD" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Website Design" },
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1500", "priceCurrency": "USD" }
+        }
+      ]
+    },
     "knowsAbout": [
       "Web Design",
       "Website Development",
@@ -78,11 +104,13 @@
     "founder": [
       {
         "@type": "Person",
+        "@id": "https://mainstreetdigitalservices.com/about#bryan-fossi",
         "name": "Bryan Fossi",
         "jobTitle": "Founder"
       },
       {
         "@type": "Person",
+        "@id": "https://mainstreetdigitalservices.com/about#jared-witwer",
         "name": "Jared Witwer",
         "jobTitle": "President of Client & Digital Services"
       }
@@ -172,7 +200,7 @@
       </div>
       <div class="hero-home-content">
         <p class="section-label" style="color: var(--gold); margin-bottom: 1.25rem;">
-          Pennsylvania Local Business Marketing
+          Lancaster County, Pennsylvania
         </p>
         <h1 id="hero-heading">We Show Up.<br>You Stand Out.</h1>
         <p class="hero-sub">
@@ -196,7 +224,7 @@
 
     <!-- ── INDUSTRY STATS ──────────────────────────────────── -->
     <section class="stats-section" aria-labelledby="stats-heading">
-      <h2 id="stats-heading" class="visually-hidden">Why local businesses need a strong online presence</h2>
+      <h2 id="stats-heading" class="visually-hidden">Why Lancaster small businesses need a strong online presence</h2>
       <div class="container">
         <div class="stats-grid">
           <div class="stat-block">
@@ -330,7 +358,7 @@
             <h3>Social Media Marketing</h3>
             <p class="service-price">Starting at $497/mo</p>
             <p>Consistent, on-brand content across your most important platforms. From custom posts to paid ads — we handle all of it so your business stays top of mind.</p>
-            <a href="/services" class="text-link">See Social Media Pricing</a>
+            <a href="/pricing#social-media" class="text-link">See Social Media Pricing</a>
           </div>
 
           <div class="service-preview-card">
@@ -338,7 +366,7 @@
             <h3>Website Design &amp; Development</h3>
             <p class="service-price">Starting at $1,500</p>
             <p>A website that actually works for your business — mobile-first, fast, and built to turn visitors into leads from the moment they land on it.</p>
-            <a href="/services" class="text-link">See Web Design Pricing</a>
+            <a href="/pricing#websites" class="text-link">See Web Design Pricing</a>
           </div>
 
         </div>
