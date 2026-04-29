@@ -233,7 +233,6 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    // Add reveal class to eligible elements
     const revealSelectors = [
       '.pain-card',
       '.how-column',
@@ -248,10 +247,26 @@
       '.mission-visual',
     ];
 
-    document.querySelectorAll(revealSelectors.join(', ')).forEach((el, i) => {
+    /* Group elements into rows by shared offsetTop, then stagger within each row.
+       Items that wrap to a new row restart the stagger so the animation reads
+       left-to-right per row instead of marching down DOM order. */
+    const elements = Array.from(document.querySelectorAll(revealSelectors.join(', ')));
+    let lastTop = null;
+    let columnIndex = 0;
+
+    elements.forEach(el => {
+      const top = el.offsetTop;
+      // Treat anything within 8px vertically as the same row
+      if (lastTop === null || Math.abs(top - lastTop) > 8) {
+        columnIndex = 0;
+        lastTop = top;
+      } else {
+        columnIndex += 1;
+      }
+      const delay = (columnIndex * 0.1).toFixed(2);
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
-      el.style.transition = `opacity 0.55s ease ${(i % 3) * 0.1}s, transform 0.55s ease ${(i % 3) * 0.1}s`;
+      el.style.transition = `opacity 0.55s ease ${delay}s, transform 0.55s ease ${delay}s`;
       observer.observe(el);
     });
   }
