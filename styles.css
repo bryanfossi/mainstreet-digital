@@ -513,7 +513,7 @@ section {
   opacity: 1;
 }
 
-/* Animated diagonal line texture */
+/* Static diagonal line texture + navy overlay — covers the full screen at all times */
 .hero-home::before {
   content: '';
   position: absolute;
@@ -527,8 +527,6 @@ section {
       rgba(var(--blue-rgb), 0.06) 38px,
       rgba(var(--blue-rgb), 0.06) 39px
     );
-  animation: slideLines 22s linear infinite;
-  will-change: transform;
   z-index: 1;
 }
 
@@ -546,11 +544,6 @@ section {
   animation: glowPulse 9s ease-in-out infinite;
   pointer-events: none;
   z-index: 1;
-}
-
-@keyframes slideLines {
-  from { transform: translateX(0); }
-  to   { transform: translateX(78px); }
 }
 
 @keyframes glowPulse {
